@@ -1,0 +1,26 @@
+.parallax {
+  overflow: hidden;
+  white-space: nowrap;
+  display: flex;
+  justify-content: center; /* Centers horizontally */
+  align-items: center; /* Centers vertically */
+  position: relative;
+  width: 100%;
+  height: 80px; /* Adjust as needed */
+}
+
+.scroller {
+  display: flex;
+  justify-content: center; /* Ensures text is centered */
+  align-items: center; /* Centers text vertically */
+  font-size: 2rem; /* Adjust based on your design */
+  font-weight: bold;
+  text-transform: uppercase;
+  white-space: nowrap;
+  color: white; /* Adjust color as needed */
+  width: max-content; /* Ensures the text does not stretch */
+}
+
+.scroller span {
+  margin: 0 2rem; /* Adds spacing between words */
+}
