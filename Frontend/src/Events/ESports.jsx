@@ -23,7 +23,7 @@ const Code = () => {
     setErrorMessage("");
 
     try {
-      const response = await axios.post("https://pointers.onrender.com/api/cse/quiz", formData);
+      const response = await axios.post("https://pointers.onrender.com/api/cse/esports", formData);
       console.log("Registration Successful:", response.data);
 
       setIsRegistered(true);
