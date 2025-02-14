@@ -30,7 +30,7 @@ const Code = () => {
       setFormData({ Name: "", Email: "", Phone_No: "", College: "" });
     } catch (error) {
       console.error("Registration Failed:", error);
-      setErrorMessage("Registration failed. Please try again.");
+      setErrorMessage("Participant is can only Register for one event");
     }
   };
 
