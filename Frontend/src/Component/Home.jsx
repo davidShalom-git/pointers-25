@@ -1,4 +1,4 @@
-import { useRef, useEffect } from "react";
+import { useRef, useEffect, useState } from "react";
 import {
   motion,
   useScroll,
@@ -12,11 +12,12 @@ import { wrap } from "@motionone/utils";
 import Spline from "@splinetool/react-spline";
 import { Link } from "react-router-dom";
 import gsap from "gsap";
-import cse from "../assets/cse.png";
+import broly from "../assets/broly.png";
 import educate from "../assets/educate.png";
 import explore from "../assets/Explore.png";
-import success from "../assets/success.png";
-import vegeta from '../assets/vegeta.png';
+import it from '../assets/SSJ.jpg';
+import cse from '../assets/R.png';
+import beerus from '../assets/Beerus.jpg';
 import Nav from "./Nav";
 import "../App.css";
 
@@ -65,6 +66,21 @@ const Home = () => {
   const pointerMobileRef = useRef(null);
   const k25MobileRef = useRef(null);
 
+  const [activeIndex, setActiveIndex] = useState(null);
+
+  const questions = [
+    { question: "Who can participate?", answer: "Students from various engineering branches can participate." },
+    { question: "How many events can students participate in?", answer: "Students can participate in one event only." },
+    { question: "Will food be provided during the event?", answer: "Yes, food is available for participants. Accommodation is also available upon prior request." },
+    { question: "Is the amount refundable?", answer: "No." },
+    { question: "Will participation certificates be provided?", answer: "Yes." },
+  ];
+  
+
+  const handleToggle = (index) => {
+    setActiveIndex(activeIndex === index ? null : index);
+  };
+
   useEffect(() => {
     // For large screens
     gsap.fromTo(pointerRef.current, { y: 50, opacity: 0 }, { y: 0, opacity: 1, duration: 1.5, ease: 'power3.out' });
@@ -96,39 +112,17 @@ const Home = () => {
           </div>
         </div>
 
-        <div className="grid lg:grid-cols-2 md:grid-cols-2 grid-cols-2 space-y-6 gap-6 mt-20 mx-auto mb-10 px-6">
-          {[
-            { img: explore, label: "Explore", bg: "bg-white", text: "text-black", shadow: "shadow-black" },
-            { img: educate, label: "Educate", bg: "bg-gradient-to-r from-black to-black", text: "text-white", shadow: "shadow-white" },
-            { img: educate, label: "Educate", bg: "bg-gradient-to-r from-black to-black", text: "text-white", shadow: "shadow-white" },
-            { img: success, label: "Achieve", bg: "bg-white", text: "text-black", shadow: "shadow-black" }
-          ].map((dept, index) => (
-            <div
-              key={index}
-              className={`${dept.bg} ${dept.shadow} shadow-xl p-10 flex flex-col items-center justify-center h-[160px] w-[90%] md:w-[60%] lg:w-[70%] lg:h-[200px] mx-auto rounded-3xl transition-transform transform hover:scale-105 animate-bounce`}
-            >
-              <img src={dept.img} className="h-[120px] mx-auto" alt={dept.label} />
-              <p className={`mt-5 text-xl font-semibold ${dept.text}`}>
-                <Link to={dept.link}>{dept.label}</Link>
-              </p>
-            </div>
-          ))}
-        </div>
 
-        <div className="flex flex-col mx-auto md:flex-col lg:flex-row lg:space-x-2 mt-20 mb-10 justify-evenly md:border lg:border lg:border-white border border-white md:border-black p-5 md:p-10 lg:p-5 md:mx-auto rounded-xl shadow-lg lg:w-[90%]">
-          {/* Image Section */}
-          <div className="flex justify-center mb-6 md:mb-0">
-            <img src={cse} className="h-[300px] md:h-[440px] w-auto mx-auto rounded-lg" alt="Learn" />
-          </div>
 
-          {/* Text Section */}
-          <div className="flex flex-col justify-center items-center h-auto w-[103%] md:w-[100%] mt-5 lg:w-[50%] mx-auto bg-white border border-white lg:p-7 p-10">
-            <h2 className="text-2xl md:text-3xl font-bold text-black text-center md:text-left mb-4">
-              Learn What Matters
-            </h2>
-            <p className="text-base md:text-lg text-black leading-relaxed">
-              Education is not just about acquiring knowledge; it is about learning what truly matters in life. Whether you're exploring new skills or diving deeper into your passions, the journey of learning shapes the future. Focus on what excites you, what sparks curiosity, and what has the power to impact your life and the world around you. With the right tools and mindset, anything is possible. Start learning today and discover the true power of education.
+        <div className="flex flex-col md:flex-row items-center justify-between py-16 gap-10">
+          <div className="w-full md:w-1/2 text-center md:text-left">
+            <h2 className="text-3xl font-bold text-white">Computer Science Engineers</h2>
+            <p className="text-lg text-gray-500 mt-4">
+              We are a passionate community of CSE students, driven by innovation and a thirst for knowledge. At Arunai Engineering College, we embrace technology to create impactful solutions, shaping the future through creativity, collaboration, and excellence."
             </p>
+          </div>
+          <div className="w-full md:w-1/2">
+            <img src={broly} alt="Team" className="rounded-lg shadow-lg w-full" />
           </div>
         </div>
 
@@ -144,7 +138,7 @@ const Home = () => {
 
 
         <div className="bg-white p-6 w-[95%] sm:p-10 sm:w-3/4 md:w-1/2 mx-auto mb-10 rounded-[40px]">
-          <h1 className="text-black text-center text-lg sm:text-2xl font-bold italic leading-relaxed">
+          <h1 className="text-black text-center text-xl sm:text-2xl font-bold italic leading-relaxed">
             Events
           </h1>
         </div>
@@ -153,22 +147,85 @@ const Home = () => {
           {[
             { img: explore, label: "Technical", bg: "bg-white", text: "text-black", shadow: "shadow-black", link: "/technical" },
             { img: educate, label: "NonTech", bg: "bg-gradient-to-r from-black to-black", text: "text-white", shadow: "shadow-white", link: "/nont" },
-
           ].map((dept, index) => (
-            <motion.div whileHover={{ scale: 1.2 }}
-              whileTap={{ scale: 0.8 }}
-              key={index}
-              className={`${dept.bg} ${dept.shadow} shadow-xl p-10 flex flex-col items-center justify-center h-[180px] w-[105%] md:w-[60%] lg:w-[70%] lg:h-[240px] mx-auto rounded-3xl transition-transform transform hover:scale-105`}
-            >
-              <img src={dept.img} className="h-[120px] mx-auto" alt={dept.label} />
-              <p className={`mt-5 text-xl font-semibold ${dept.text}`}>
-                <Link to={dept.link}>{dept.label}</Link>
-              </p>
-            </motion.div>
+            <Link to={dept.link} className="text-center text-lg text-white font-bold italic">
+              <motion.div
+                whileHover={{ scale: 1.2 }}
+                whileTap={{ scale: 0.8 }}
+                key={index}
+                className={`${dept.bg} ${dept.shadow} shadow-xl p-10 flex flex-col items-center justify-center h-[180px] w-[105%] md:w-[60%] lg:w-[70%] lg:h-[240px] mx-auto rounded-3xl transition-transform transform hover:scale-105`}
+              >
+                <img src={dept.img} className="h-[120px] mx-auto" alt={dept.label} />
+                <p className={`${dept.text} mt-2`}>{dept.label}</p>
+              </motion.div>
+            </Link>
           ))}
         </div>
 
+        <div className="py-16 text-center">
+          <h2 className="text-3xl font-bold text-gray-300">Staff's Organizers</h2>
+         
+          <div className="flex overflow-x-auto py-4 gap-10 mt-10">
+            {[{ img: it, name: "David", role: "III Year" },
+            { img: cse, name: "Mohan", role: "IV YEAR" },
+            { img: beerus, name: "Kannadhasan", role: "III Year" },
+            { img: beerus, name: "Kannadhasan", role: "III Year" },
+            { img: beerus, name: "Kannadhasan", role: "III Year" },
+            { img: beerus, name: "Kannadhasan", role: "III Year" },].map((member, index) => (
+              <div key={index} className="min-w-[300px] text-center shadow-lg p-5 rounded-lg bg-white">
+                <img src={member.img} alt={member.name} className="w-48 h-32 rounded-full mx-auto" />
+                <h3 className="text-xl font-semibold mt-4">{member.name}</h3>
+                <p className="text-gray-600">{member.role}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+
+        <div className="py-16 text-center">
+          <h2 className="text-3xl font-bold text-gray-300">Student Organizers</h2>
         
+          <div className="flex overflow-x-auto py-4 gap-10 mt-10">
+            {[{ img: it, name: "David", role: "III Year" },
+            { img: cse, name: "Mohan", role: "IV YEAR" },
+            { img: beerus, name: "Kannadhasan", role: "III Year" },
+            { img: beerus, name: "Kannadhasan", role: "III Year" },
+            { img: beerus, name: "Kannadhasan", role: "III Year" },
+            { img: beerus, name: "Kannadhasan", role: "III Year" },].map((member, index) => (
+              <div key={index} className="min-w-[300px] text-center shadow-lg p-5 rounded-lg bg-white">
+                <img src={member.img} alt={member.name} className="w-48 h-32 rounded-full mx-auto" />
+                <h3 className="text-xl font-semibold mt-4">{member.name}</h3>
+                <p className="text-gray-600">{member.role}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+
+        <div className="py-16 text-center">
+          <h2 className="text-3xl font-bold text-gray-300">Pointer's 2K25</h2>
+          <p className="text-lg text-gray-300 mt-4">Feel Free Each to Each Us.....</p>
+          <a href="mailto:contact@yourcompany.com" className="mt-5 inline-block px-6 py-3 bg-blue-600 text-white rounded-full text-lg font-bold">
+            Contact Us
+          </a>
+        </div>
+
+        <div className="py-8 px-4 mx-auto">
+      <h2 className="text-2xl font-bold text-gray-800 text-center mb-6">Doubt?</h2>
+      {questions.map((item, index) => (
+        <div key={index} className="mb-4 flex flex-col justify-center items-center">
+          <button
+            onClick={() => handleToggle(index)}
+            className="lg:w-[50%]  w-full text-left py-2 px-4 bg-gray-200 rounded-md focus:outline-none"
+          >
+            <h3 className="text-lg font-semibold lg:w-[50%] w-full text-gray-700">{item.question}</h3>
+          </button>
+          {activeIndex === index && (
+            <div className="mt-2 pl-4 pr-2 py-2 lg:w-[50%] w-full bg-gray-100 rounded-md">
+              <p className="text-gray-600">{item.answer}</p>
+            </div>
+          )}
+        </div>
+      ))}
+    </div>
 
       </div>
     </>

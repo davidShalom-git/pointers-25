@@ -49,7 +49,7 @@ const Code = () => {
             <ul className="flex space-x-6 text-lg">
               <li><Link to="/home" className="hover:text-gray-400">Home</Link></li>
               <li><Link to="/technical" className="hover:text-gray-400">Events</Link></li>
-              <li><Link to="/card" className="hover:text-gray-400">Guest</Link></li>
+             
               <li><Link to="/contact" className="hover:text-gray-400">About</Link></li>
             </ul>
           </div>

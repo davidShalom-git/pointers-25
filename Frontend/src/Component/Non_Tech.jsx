@@ -3,7 +3,10 @@ import { Link } from 'react-router-dom';
 import { TextPlugin } from 'gsap/TextPlugin';
 import gsap from 'gsap';
 import cse from '../assets/cse.png';
-import it from '../assets/it.png';
+import st from '../assets/st.png';
+import it from '../assets/geo.png';
+import ipl from '../assets/ipl.png';
+import es from '../assets/es.png';
 import Nav from './Nav';
 
 
@@ -17,10 +20,10 @@ const NonTechPage = () => { // ✅ Rename component
   const [searchQuery, setSearchQuery] = useState('');
 
   const topics = [
-    { title: 'IPL', imgSrc: cse, direc: '/ipl' },
-    { title: 'ESports', imgSrc: it, direc: '/esports' },
-    { title: 'Story', imgSrc: cse, direc: '/story' },
-    { title: 'GoogleMap', imgSrc: it, direc: '/google' },
+    { title: 'IPL', imgSrc: ipl, direc: '/ipl' },
+    { title: 'ESports', imgSrc: es, direc: '/esports' },
+    { title: 'Comic Con', imgSrc: st, direc: '/story' },
+    { title: 'Geo Hunters', imgSrc: it, direc: '/google' },
   ];
 
   const filteredTopics = topics.filter((topic) =>
@@ -93,7 +96,7 @@ const NonTechPage = () => { // ✅ Rename component
 
   return (
     <>
-    <Nav />
+      <Nav />
       <div className="container mx-auto my-10 px-3">
         <div className="bg-white p-6 w-[95%] sm:p-10  sm:w-3/4 md:w-1/2 mx-auto mb-10 rounded-[40px]">
           <h1 className="text-black text-center text-lg sm:text-2xl font-bold italic leading-relaxed">
@@ -102,9 +105,10 @@ const NonTechPage = () => { // ✅ Rename component
         </div>
         <div className="container grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-2 gap-6 mx-auto mt-10 mb-20 px-4">
           {filteredTopics.map((topic, index) => (
+            <Link to={`${topic.direc}`} className="text-black hover:text-gray-400">
             <div
               key={index}
-              className="shadow-lg shadow-black p-6 md:p-8 mb-10 rounded-full bg-white lg:w-[70%] md:w-[90%] w-[100%] mx-auto"
+              className="shadow-lg shadow-black p-6 md:p-8 mb-10 rounded-full bg-white lg:w-[70%] md:w-[90%] w-[80%] mx-auto"
               ref={(el) => (cardRefs.current[index] = el)}
             >
               <img
@@ -113,16 +117,20 @@ const NonTechPage = () => { // ✅ Rename component
                 alt={topic.title}
               />
               <h1 className="text-center mt-6 text-lg md:text-xl text-black">
-                <Link to={`${topic.direc}`} className="text-black hover:text-gray-400">
                   {topic.title}
-                </Link>
               </h1>
             </div>
+            </Link>
           ))}
         </div>
+          <Link to='/technical' className="text-black text-lg sm:text-2xl font-bold italic leading-relaxed">
+        <div className="bg-white flex items-center justify-center p-6 w-[95%] sm:p-10 sm:w-3/4 md:w-1/2 mx-auto mb-10 rounded-[40px]">
+          &larr; Technical
+        </div>
+          </Link>
       </div>
     </>
   );
 };
 
-export default NonTechPage; // ✅ Use new name
+export default NonTechPage; 

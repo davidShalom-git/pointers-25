@@ -54,8 +54,7 @@ const Register = () => {
             <ul className="flex space-x-6 text-lg">
               <li><Link to="/home" className="hover:text-gray-400">Home</Link></li>
               <li><Link to="/technical" className="hover:text-gray-400">Events</Link></li>
-              <li><Link to="/video" className="hover:text-gray-400">Video</Link></li>
-              <li><Link to="/about" className="hover:text-gray-400">About</Link></li>
+              <li><Link to="/contact" className="hover:text-gray-400">About</Link></li>
             </ul>
           </div>
 
@@ -146,6 +145,9 @@ const Register = () => {
           <p className="mt-4 text-center text-gray-300">
             Already have an account? <Link to="/login" className="text-blue-500">Login</Link>
           </p>
+        </div>
+        <div className="bg-white">
+          
         </div>
       </div>
     </div>

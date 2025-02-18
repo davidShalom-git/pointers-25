@@ -4,7 +4,6 @@ import Home from './Component/Home';
 import Home1 from './Component/Home1';
 import Technical from './Component/Technical';
 import Non_Tech from './Component/Non_Tech';
-import Card from './Component/Guest';
 import PPT from './Events/PPT';
 import Code from './Events/Code';
 import Web from './Events/Web';
@@ -27,7 +26,6 @@ const App = () => {
         <Route path='/home' element={<Home />} />
         <Route path='/technical' element={<Technical />} />
         <Route path='/nont' element={<Non_Tech />} />
-        <Route path='/card' element={<Card />} />
         <Route path='/PPT' element={<PPT />} />
         <Route path='/code' element={<Code />} />
         <Route path='/web' element={<Web />} />

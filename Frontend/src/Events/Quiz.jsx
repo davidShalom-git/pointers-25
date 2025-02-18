@@ -30,7 +30,7 @@ const Code = () => {
       setFormData({ Name: "", Email: "", Phone_No: "", College: "" });
     } catch (error) {
       console.error("Registration Failed:", error);
-      setErrorMessage("Participant is can only Register for one event");
+      setErrorMessage("Participant can only register for one event");
     }
   };
 
@@ -49,7 +49,6 @@ const Code = () => {
             <ul className="flex space-x-6 text-lg">
               <li><Link to="/home" className="hover:text-gray-400">Home</Link></li>
               <li><Link to="/technical" className="hover:text-gray-400">Events</Link></li>
-              <li><Link to="/card" className="hover:text-gray-400">Guest</Link></li>
               <li><Link to="/contact" className="hover:text-gray-400">About</Link></li>
             </ul>
           </div>
@@ -57,8 +56,20 @@ const Code = () => {
       </nav>
 
       {/* Form Container */}
-      <div className="relative w-full h-full flex items-center justify-center bg-fixed bg-cover bg-center lg:mt-20 mt-64">
-        <div className="max-w-md w-full mb-20 p-8 rounded-lg shadow-lg" style={{
+      <div className="relative w-full h-full flex flex-col lg:flex-row items-center justify-evenly bg-fixed bg-cover bg-center lg:mt-20 mt-64 p-4 space-y-8 lg:space-y-0 lg:space-x-8">
+        <div className="bg-white flex-1 p-8 rounded-lg shadow-lg border border-gray-300 mb-8 lg:mb-0">
+          <h1 className="text-center text-2xl font-bold mb-4">Rules</h1>
+          <ul className="text-gray-700 list-decimal text-justify list-inside space-y-4">
+            <li>Participants must Register before the event starts. Late Entries will not be Entertained.</li>
+            <li>The Quiz will be Conducted in multiple rounds (3 to 4 rounds)</li>
+            <li>Each Round will have a fixed time limit, and participants must submit their answers within the given time.</li>
+            <li>In Each round, only top-scoring contestants will proceed to the next stage. (Each round has elimination).</li>
+            <li>The quiz will be conducted either individually or in teams of two members, depending in event guidelines. (Per team should have 2 Members).</li>
+            <li>Use of Mobile phone or other digital device is strictly prohibited.</li>
+            <li>Participation Certificates may be given to all Contestants.</li>
+          </ul>
+        </div>
+        <div className="max-w-full flex-1 w-full mb-20 p-8 rounded-lg shadow-lg" style={{
           background: "rgba(255, 255, 255, 0.1)",
           backdropFilter: "blur(15px)",
           borderRadius: "12px",
@@ -119,13 +130,11 @@ const Code = () => {
 
               {errorMessage && <p className="text-red-400 text-center mb-4">{errorMessage}</p>}
 
-              <div className="flex justify-center space-x-4">
+              <div className="flex flex-col lg:flex-row justify-center space-y-4 lg:space-y-0 lg:space-x-4">
                 <button type="submit" className="relative group border-2 px-10 py-2 rounded-xl border-white text-white font-bold text-lg transition-all hover:bg-white hover:text-black">
                   Register
                 </button>
-                <a href={Quiz} download className="relative group border-2 px-10 py-2 rounded-xl border-white text-white font-bold text-lg transition-all hover:bg-white hover:text-black">
-                  Rules
-                </a>
+                
               </div>
             </form>
           )}

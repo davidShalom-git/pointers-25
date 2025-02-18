@@ -71,7 +71,6 @@ const Nav = () => {
             <ul className="flex flex-col md:flex-row justify-center items-center space-y-4 md:space-y-0 md:space-x-4">
               <li><Link to="/home" className="text-xl text-white hover:text-gray-400">Home</Link></li>
               <li><Link to="/technical" className="text-xl text-white hover:text-gray-400">Events</Link></li>
-              <li><Link to="/card" className="text-xl text-white hover:text-gray-400">Guest</Link></li>
               <li><Link to="/contact" className="text-xl text-white hover:text-gray-400">About</Link></li>
             </ul>
           </div>
