@@ -1,7 +1,6 @@
 import React, { useState, useEffect, useRef } from 'react';
 import gsap from "gsap";
 import galaxy from "../assets/galaxy.png";
-
 import bk from '../assets/net.gif';
 import Typewriter from 'react-typewriter-effect';
 import { Link } from 'react-router-dom';
@@ -101,7 +100,7 @@ const Home1 = () => {
                         cursorColor="#3F3D56"
                         multiText={[
                             "Arunai Engineering College....",
-                            "Learn What Matters...!"
+                            "Department of Computer Science and Engineering!"
                         ]}
                         multiTextDelay={100}
                         typeSpeed={70}

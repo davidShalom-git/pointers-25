@@ -29,8 +29,8 @@ const Technical = () => {
 
   return (
     <>
-      <Nav />
-      <div className="container mx-auto my-10 px-3">
+     
+      <div className="container mx-auto my-10 px-3 mt-10">
         <div className="bg-white p-6 w-[95%] sm:p-10 sm:w-3/4 md:w-1/2 mx-auto mb-10 rounded-[40px]">
           <h1 className="text-black text-center text-lg sm:text-2xl font-bold italic leading-relaxed">
             Technical

@@ -2,12 +2,11 @@ import React, { useEffect, useRef, useState } from 'react';
 import { Link } from 'react-router-dom';
 import { TextPlugin } from 'gsap/TextPlugin';
 import gsap from 'gsap';
-import cse from '../assets/cse.png';
 import st from '../assets/st.png';
 import it from '../assets/geo.png';
 import ipl from '../assets/ipl.png';
 import es from '../assets/es.png';
-import Nav from './Nav';
+
 
 
 gsap.registerPlugin(TextPlugin);
@@ -96,7 +95,6 @@ const NonTechPage = () => { // ✅ Rename component
 
   return (
     <>
-      <Nav />
       <div className="container mx-auto my-10 px-3">
         <div className="bg-white p-6 w-[95%] sm:p-10  sm:w-3/4 md:w-1/2 mx-auto mb-10 rounded-[40px]">
           <h1 className="text-black text-center text-lg sm:text-2xl font-bold italic leading-relaxed">

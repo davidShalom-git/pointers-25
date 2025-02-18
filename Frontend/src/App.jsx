@@ -13,6 +13,7 @@ import ESports from './Events/ESports';
 import Story from './Events/Story';
 import Google from './Events/Google';
 import Contact from './Component/Contact';
+import Event from './Component/Event';
 
 
 
@@ -36,6 +37,7 @@ const App = () => {
         <Route path='/google' element={<Google />} />
         <Route path='/google' element={<Google />} />
         <Route path='/contact' element={<Contact />} />
+        <Route path='/event' element={<Event />} />
       </Routes>
     </Router>
     

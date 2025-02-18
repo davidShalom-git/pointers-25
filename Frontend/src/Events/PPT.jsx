@@ -3,7 +3,6 @@ import bk from "../assets/Nature.gif";
 import { Link } from "react-router-dom";
 import galaxy from "../assets/galaxy.png";
 import axios from "axios";
-import Quiz from "../assets/Quiz.pdf";
 
 const Code = () => {
   const [formData, setFormData] = useState({
@@ -14,7 +13,6 @@ const Code = () => {
   });
 
   const [isRegistered, setIsRegistered] = useState(false);
-  const [isOpen, setIsOpen] = useState(false);
   const [errorMessage, setErrorMessage] = useState("");
 
   // Handle form submission
@@ -40,20 +38,7 @@ const Code = () => {
       style={{ backgroundImage: `url(${bk})` }}
     >
       {/* Navigation Bar */}
-      <nav className="w-full fixed top-0 left-0 bg-opacity-80 text-white py-4 px-6 shadow-lg z-50">
-        <div className="container mx-auto flex items-center justify-between relative">
-          <div className="flex items-center space-x-3">
-            <img src={galaxy} alt="Galaxy Icon" className="h-10 w-10 animate-spin" />
-          </div>
-          <div className="absolute left-1/2 transform -translate-x-1/2 hidden md:block">
-            <ul className="flex space-x-6 text-lg">
-              <li><Link to="/home" className="hover:text-gray-400">Home</Link></li>
-              <li><Link to="/technical" className="hover:text-gray-400">Events</Link></li>
-              <li><Link to="/contact" className="hover:text-gray-400">About</Link></li>
-            </ul>
-          </div>
-        </div>
-      </nav>
+    
 
       {/* Form Container */}
       <div className="relative w-full h-full flex flex-col lg:flex-row items-center justify-evenly bg-fixed bg-cover bg-center lg:mt-20 mt-64 p-4 space-y-8 lg:space-y-0 lg:space-x-8">

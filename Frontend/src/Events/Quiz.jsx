@@ -3,7 +3,6 @@ import bk from "../assets/Nature.gif";
 import { Link } from "react-router-dom";
 import galaxy from "../assets/galaxy.png";
 import axios from "axios";
-import Quiz from "../assets/Quiz.pdf";
 
 const Code = () => {
   const [formData, setFormData] = useState({
@@ -14,7 +13,6 @@ const Code = () => {
   });
 
   const [isRegistered, setIsRegistered] = useState(false);
-  const [isOpen, setIsOpen] = useState(false);
   const [errorMessage, setErrorMessage] = useState("");
 
   // Handle form submission
@@ -40,33 +38,20 @@ const Code = () => {
       style={{ backgroundImage: `url(${bk})` }}
     >
       {/* Navigation Bar */}
-      <nav className="w-full fixed top-0 left-0 bg-opacity-80 text-white py-4 px-6 shadow-lg z-50">
-        <div className="container mx-auto flex items-center justify-between relative">
-          <div className="flex items-center space-x-3">
-            <img src={galaxy} alt="Galaxy Icon" className="h-10 w-10 animate-spin" />
-          </div>
-          <div className="absolute left-1/2 transform -translate-x-1/2 hidden md:block">
-            <ul className="flex space-x-6 text-lg">
-              <li><Link to="/home" className="hover:text-gray-400">Home</Link></li>
-              <li><Link to="/technical" className="hover:text-gray-400">Events</Link></li>
-              <li><Link to="/contact" className="hover:text-gray-400">About</Link></li>
-            </ul>
-          </div>
-        </div>
-      </nav>
+      
 
       {/* Form Container */}
       <div className="relative w-full h-full flex flex-col lg:flex-row items-center justify-evenly bg-fixed bg-cover bg-center lg:mt-20 mt-64 p-4 space-y-8 lg:space-y-0 lg:space-x-8">
         <div className="bg-white flex-1 p-8 rounded-lg shadow-lg border border-gray-300 mb-8 lg:mb-0">
           <h1 className="text-center text-2xl font-bold mb-4">Rules</h1>
-          <ul className="text-gray-700 list-decimal text-justify list-inside space-y-4">
-            <li>Participants must Register before the event starts. Late Entries will not be Entertained.</li>
-            <li>The Quiz will be Conducted in multiple rounds (3 to 4 rounds)</li>
-            <li>Each Round will have a fixed time limit, and participants must submit their answers within the given time.</li>
-            <li>In Each round, only top-scoring contestants will proceed to the next stage. (Each round has elimination).</li>
-            <li>The quiz will be conducted either individually or in teams of two members, depending in event guidelines. (Per team should have 2 Members).</li>
-            <li>Use of Mobile phone or other digital device is strictly prohibited.</li>
-            <li>Participation Certificates may be given to all Contestants.</li>
+          <ul className="text-gray-700 list-decimal list-inside space-y-4">
+            <li>Participants must submit their research papers before the deadline. Late submissions will not be accepted.</li>
+            <li>Papers must be original and should not have been published or presented elsewhere.</li>
+            <li>Each paper should be related to the given topics.</li>
+            <li>The decision of the judges will be final and binding.</li>
+            <li>Plagiarism should be below 10-15%, and proper citations must be included.</li>
+            <li>Each team should have 3 to 4 participants, no more than that.</li>
+            <li>Each participant will get 8-10 minutes to present their paper.</li>
           </ul>
         </div>
         <div className="max-w-full flex-1 w-full mb-20 p-8 rounded-lg shadow-lg" style={{

@@ -66,14 +66,14 @@ const Nav = () => {
             </button>
           </div>
 
-          
           <div className={`flex-1 md:flex ${isOpen ? "block" : "hidden"} md:block justify-center mt-4 md:mt-0`}>
-            <ul className="flex flex-col md:flex-row justify-center items-center space-y-4 md:space-y-0 md:space-x-4">
-              <li><Link to="/home" className="text-xl text-white hover:text-gray-400">Home</Link></li>
-              <li><Link to="/technical" className="text-xl text-white hover:text-gray-400">Events</Link></li>
-              <li><Link to="/contact" className="text-xl text-white hover:text-gray-400">About</Link></li>
-            </ul>
-          </div>
+          <ul className="flex flex-col md:flex-row justify-center items-center space-y-4 md:space-y-0 md:space-x-4">
+            <li><Link to="/home" className="text-xl text-white hover:text-gray-400">Home</Link></li>
+            <li><a href="#cse" className="text-xl text-white hover:text-gray-400">About</a></li>
+            <li><a href="#event" className="text-xl text-white hover:text-gray-400">Events</a></li>
+            <li><a href="#organizer" className="text-xl text-white hover:text-gray-400">Contact</a></li>
+          </ul>
+        </div>
         </div>
       </div>
     </>
