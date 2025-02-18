@@ -12,7 +12,7 @@ import { wrap } from "@motionone/utils";
 import Spline from "@splinetool/react-spline";
 import { Link } from "react-router-dom";
 import gsap from "gsap";
-import broly from "../assets/broly.png";
+import broly from "../assets/Broly.png";
 import educate from "../assets/educate.png";
 import explore from "../assets/Explore.png";
 import it from '../assets/SSJ.jpg';
