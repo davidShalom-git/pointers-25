@@ -18,7 +18,6 @@ import explore from "../assets/Explore.png";
 import it from '../assets/SSJ.jpg';
 import cse from '../assets/R.png';
 import beerus from '../assets/Beerus.jpg';
-import broly from '../assets/Broly.png';
 import Nav from "./Nav";
 import "../App.css";
 
