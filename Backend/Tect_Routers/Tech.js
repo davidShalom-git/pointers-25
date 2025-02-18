@@ -38,7 +38,7 @@ async function isUserAlreadyRegistered(email) {
 // Function to handle registration with duplicate check across all events
 async function createDocument(req, res, Model, subject, message) {
   try {
-    const { Name, Email, Phone_No, College } = req.body;
+    const { Name, Email, Phone_No, College,With_Accomadation,Without_Accomadation } = req.body;
 
     // Check if the user has already registered for any event
     if (await isUserAlreadyRegistered(Email)) {
@@ -46,7 +46,7 @@ async function createDocument(req, res, Model, subject, message) {
     }
 
     // Save new registration
-    const newData = new Model({ Name, Email, Phone_No, College });
+    const newData = new Model({ Name, Email, Phone_No, College,With_Accomadation,Without_Accomadation });
     await newData.save();
 
     // Send confirmation email

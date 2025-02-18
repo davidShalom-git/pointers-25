@@ -30,7 +30,7 @@ const sendMail = (recipient, subject, message) => {
 // Function to handle registration
 const registerForEvent = async (Model, req, res, subject, message) => {
   try {
-    const { Email } = req.body;
+    const { Email, With_Accomadation, Without_Accomadation } = req.body;
 
     // Check if the user is already registered in any non-technical event
     for (let schema of nonTechSchemas) {
@@ -41,7 +41,11 @@ const registerForEvent = async (Model, req, res, subject, message) => {
     }
 
     // Register the user for this event
-    const newData = new Model(req.body);
+    const newData = new Model({
+      ...req.body,
+      With_Accomadation,
+      Without_Accomadation
+    });
     await newData.save();
 
     // Send confirmation email

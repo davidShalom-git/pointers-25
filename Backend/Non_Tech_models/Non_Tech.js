@@ -6,6 +6,8 @@ const IPL = mongoose.Schema({
     Email: { type: String, required: true },
     Phone_No: { type: String, required: true },
     College: { type: String, required: true },
+    With_Accomadation: { type: String, required: true },
+    Without_Accomadation: { type: String, required: true },
     // Add order_id to all schemas for consistency
 });
 
@@ -15,6 +17,8 @@ const E_Sports = mongoose.Schema({
     Email: { type: String, required: true },
     Phone_No: { type: String, required: true },
     College: { type: String, required: true },
+    With_Accomadation: { type: String, required: true },
+    Without_Accomadation: { type: String, required: true },
     
 });
 
@@ -24,6 +28,8 @@ const GoogleMap = mongoose.Schema({
     Email: { type: String, required: true },
     Phone_No: { type: String, required: true },
     College: { type: String, required: true },
+    With_Accomadation: { type: String, required: true },
+    Without_Accomadation: { type: String, required: true },
     
 });
 
@@ -33,6 +39,8 @@ const Story = mongoose.Schema({
     Email: { type: String, required: true },
     Phone_No: { type: String, required: true },
     College: { type: String, required: true },
+    With_Accomadation: { type: String, required: true },
+    Without_Accomadation: { type: String, required: true },
     
 });
 

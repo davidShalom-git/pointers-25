@@ -18,6 +18,8 @@ const PPT = mongoose.Schema({
         type:String,
         required: true
     },
+    With_Accomadation: { type: String, required: true },
+    Without_Accomadation: { type: String, required: true },
     
 })
 const Web = mongoose.Schema({
@@ -37,6 +39,8 @@ const Web = mongoose.Schema({
         type:String,
         required: true
     },
+    With_Accomadation: { type: String, required: true },
+    Without_Accomadation: { type: String, required: true },
     
 })
 const Coding = mongoose.Schema({
@@ -56,6 +60,8 @@ const Coding = mongoose.Schema({
         type:String,
         required: true
     },
+    With_Accomadation: { type: String, required: true },
+    Without_Accomadation: { type: String, required: true },
     
 })
 const Quiz = mongoose.Schema({
@@ -75,6 +81,8 @@ const Quiz = mongoose.Schema({
         type:String,
         required: true
     },
+    With_Accomadation: { type: String, required: true },
+    Without_Accomadation: { type: String, required: true },
     
 })
 
