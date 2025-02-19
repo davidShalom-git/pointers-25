@@ -111,7 +111,7 @@ const NonTechPage = () => { // ✅ Rename component
             >
               <img
                 src={topic.imgSrc}
-                className="h-[150px] md:h-[180px] mx-auto"
+                className="h-[130px] md:h-[180px] lg:w-[50%] w-[82%] mx-auto"
                 alt={topic.title}
               />
               <h1 className="text-center mt-6 text-lg md:text-xl text-black">
