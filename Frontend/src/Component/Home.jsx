@@ -228,14 +228,18 @@ const Home = () => {
           <h2 className="text-3xl font-bold text-gray-300">Staff's Organizers</h2>
 
           <div className="flex overflow-x-auto py-4 gap-10 mt-10">
-            {[{ img: it, name: "David", role: "III Year" },
-            { img: cse, name: "Mohan", role: "IV YEAR" },
-            { img: beerus, name: "Kannadhasan", role: "III Year" },
-            { img: beerus, name: "Kannadhasan", role: "III Year" },
-            { img: beerus, name: "Kannadhasan", role: "III Year" },
-            { img: beerus, name: "Kannadhasan", role: "III Year" },].map((member, index) => (
+            {[{ name: "Mr.N.Anandhakumar", role: "AP/CSE" },
+            { name: "Mr.K.Neelamegam", role: "AP/CSE" },
+            { name: "Mrs.V.Umadevi", role: "HOD/CSE" },
+            { name: "Mrs.G.Shoba", role: "AP/CSE" },
+            { name: "Mrs.P.Nithya", role: "AP/CSE" },
+            { name: "Mrs.M.Maheshwari", role: "AP/CSE" },
+            { name: "Mrs.R.Kalaivanisri", role: "AP/CSE" },
+            { name: "Mrs.F.Faziyudeen", role: "AP/CSE" },
+            { name: "Mrs.K.M.Banupriya", role: "AP/CSE" },
+            { name: "Ms.M.Sowndharya", role: "AP/CSE" },].map((member, index) => (
               <div key={index} className="min-w-[300px] text-center shadow-lg p-5 rounded-lg bg-white">
-                <img src={member.img} alt={member.name} className="w-48 h-32 rounded-full mx-auto" />
+                
                 <h3 className="text-xl font-semibold mt-4">{member.name}</h3>
                 <p className="text-gray-600">{member.role}</p>
               </div>
@@ -251,7 +255,12 @@ const Home = () => {
             {name: "Yuvaraj K", role: "IV Year",},
             {name: "Balu S", role: "IV Year",},
             {name: "Logeshwari", role: "IV Year" },
-            {name: "Mohan S", role: "IV Year" },].map((member, index) => (
+            {name: "Mohan S", role: "IV Year" },
+            {name: "R.P Haripriya", role: "IV Year" },
+            {name: "S.Harini", role: "IV Year" },
+            {name: "K.B.Akshaya", role: "IV Year" },
+            {name: "Yoogasri V", role: "IV Year" },
+          ].map((member, index) => (
               <div key={index} className="min-w-[300px] text-center shadow-lg p-5 rounded-lg bg-white">
                
                 <h3 className="text-xl font-semibold mt-4">{member.name}</h3>
