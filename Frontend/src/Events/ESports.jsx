@@ -8,7 +8,7 @@ const Code = () => {
     Email: "",
     Phone_No: "",
     College: "",
-    Accommodation: "" // Added field for radio button
+    Accommodation: "" 
   });
 
   const [isRegistered, setIsRegistered] = useState(false);
