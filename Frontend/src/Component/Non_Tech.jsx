@@ -11,7 +11,7 @@ import es from '../assets/es.jpg';
 
 gsap.registerPlugin(TextPlugin);
 
-const NonTechPage = () => { // ✅ Rename component
+const NonTechPage = () => { 
   const imageref = useRef(null);
   const textRef = useRef(null);
   const h1Ref = useRef(null);
