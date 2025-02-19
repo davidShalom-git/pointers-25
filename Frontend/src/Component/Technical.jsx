@@ -4,8 +4,6 @@ import cse from '../assets/cse.png';
 import it from '../assets/it.png';
 import code from '../assets/code.png';
 import sy from '../assets/sy.png';
-import Nav from './Nav';
-import NonTechPage from './Non_Tech';
 
 const Technical = () => {
   const [searchQuery, setSearchQuery] = useState('');

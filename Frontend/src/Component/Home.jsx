@@ -12,12 +12,8 @@ import { wrap } from "@motionone/utils";
 import Spline from "@splinetool/react-spline";
 import { Link } from "react-router-dom";
 import gsap from "gsap";
-import broly from "../assets/Broly.png";
 import educate from "../assets/educate.jpg";
 import explore from "../assets/Explore.png";
-import it from '../assets/SSJ.jpg';
-import cse from '../assets/R.png';
-import beerus from '../assets/Beerus.jpg';
 import point from '../assets/poin.jpg'
 import "../App.css";
 import galaxy from "../assets/galaxy.png";
