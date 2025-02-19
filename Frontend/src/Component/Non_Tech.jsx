@@ -2,10 +2,10 @@ import React, { useEffect, useRef, useState } from 'react';
 import { Link } from 'react-router-dom';
 import { TextPlugin } from 'gsap/TextPlugin';
 import gsap from 'gsap';
-import st from '../assets/st.png';
+import st from '../assets/st.jpeg';
 import it from '../assets/geo.png';
 import ipl from '../assets/ipl.png';
-import es from '../assets/es.png';
+import es from '../assets/es.jpg';
 
 
 
@@ -19,7 +19,7 @@ const NonTechPage = () => { // ✅ Rename component
   const [searchQuery, setSearchQuery] = useState('');
 
   const topics = [
-    { title: 'IPL', imgSrc: ipl, direc: '/ipl' },
+    { title: 'Secret Message', imgSrc: ipl, direc: '/ipl' },
     { title: 'ESports', imgSrc: es, direc: '/esports' },
     { title: 'Comic Con', imgSrc: st, direc: '/story' },
     { title: 'Geo Hunters', imgSrc: it, direc: '/google' },

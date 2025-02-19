@@ -13,7 +13,7 @@ import Spline from "@splinetool/react-spline";
 import { Link } from "react-router-dom";
 import gsap from "gsap";
 import broly from "../assets/Broly.png";
-import educate from "../assets/educate.png";
+import educate from "../assets/educate.jpg";
 import explore from "../assets/Explore.png";
 import it from '../assets/SSJ.jpg';
 import cse from '../assets/R.png';
@@ -162,14 +162,14 @@ const Home = () => {
       <div className="container mx-auto px-3">
         <div className="flex flex-col items-center justify-center text-center">
           <div className="relative w-full h-[100vh] flex items-center justify-center bg-black overflow-hidden">
-            <h1 ref={pointerRef} className="absolute left-10 md:left-20 lg:left-5 top-1/2 transform -translate-y-1/2 text-5xl md:text-8xl lg:text-8xl text-white font-bold opacity-70 hidden lg:block">
-              POINTER
+            <h1 ref={pointerRef} className="absolute left-10 md:left-20 lg:left-5 top-1/2 transform -translate-y-1/2 text-5xl md:text-8xl lg:text-7xl text-white font-bold opacity-70 hidden lg:block">
+              POINTER'S
             </h1>
-            <h1 ref={k25Ref} className="absolute right-10 md:right-20 lg:right-20 top-1/2 transform -translate-y-1/2 text-5xl md:text-8xl lg:text-8xl text-white font-bold opacity-70 hidden lg:block">
+            <h1 ref={k25Ref} className="absolute right-10 md:right-20 lg:right-20 top-1/2 transform -translate-y-1/2 text-5xl md:text-8xl lg:text-7xl text-white font-bold opacity-70 hidden lg:block">
               2K25
             </h1>
             <h1 ref={pointerMobileRef} className="absolute top-12 mt-2 text-5xl md:text-8xl lg:text-8xl text-white font-bold opacity-70 lg:hidden space-y-3">
-              POINTER
+              POINTER'S
             </h1>
             <h1 ref={k25MobileRef} className="absolute top-28 text-5xl md:text-8xl lg:text-8xl text-white font-bold opacity-70 lg:hidden space-y-2">
               2K25
@@ -193,15 +193,15 @@ const Home = () => {
         </div>
 
         <div className="text-center  w-full lg:ml-64 mb-10">
-          <ParallaxText baseVelocity={-5}>Pointers 2K25</ParallaxText>
-          <ParallaxText baseVelocity={5}>CSE VETERANS</ParallaxText>
+          <ParallaxText baseVelocity={5}>Dept CSE </ParallaxText>
+          <ParallaxText baseVelocity={-5}>Pointer's 2K25</ParallaxText>
         </div>
 
 
 
         <div id="event" className="bg-white p-6 w-[95%] sm:p-10 sm:w-3/4 md:w-1/2 mx-auto mb-10 rounded-[40px]">
-          <h1 className="text-black text-center text-2xl lg:text-4xl  sm:text-2xl font-bold italic leading-relaxed">
-            Events
+          <h1 className="text-black text-center text-2xl lg:text-4xl  sm:text-2xl font-extrabold italic leading-relaxed">
+            EVENTS
           </h1>
         </div>
 
@@ -245,22 +245,41 @@ const Home = () => {
 
         <div className="py-16 text-center">
           <h2 className="text-3xl font-bold text-gray-300">Student Organizers</h2>
-
           <div className="flex overflow-x-auto py-4 gap-10 mt-10">
-            {[{ img: it, name: "David", role: "III Year" },
-            { img: cse, name: "Mohan", role: "IV YEAR" },
-            { img: beerus, name: "Kannadhasan", role: "III Year" },
-            { img: beerus, name: "Kannadhasan", role: "III Year" },
-            { img: beerus, name: "Kannadhasan", role: "III Year" },
-            { img: beerus, name: "Kannadhasan", role: "III Year" },].map((member, index) => (
+            {[{ name: "Mohan S", role: "IV Year", Contact: "+91 8883214777" },
+            {name: "Adithya Srinivasan", role: "IV Year", Contact: "+91 9150889141" },
+            {name: "Yuvaraj K", role: "IV Year", Contact: "+91 6369644323" },
+            {name: "Balu S", role: "IV Year", Contact: "+91 9677379586" },
+            {name: "Logeshwari", role: "IV Year", Contact: "+91 9790970202" },
+            {name: "Mohan S", role: "IV Year", Contact: "+91 8883214777" },].map((member, index) => (
               <div key={index} className="min-w-[300px] text-center shadow-lg p-5 rounded-lg bg-white">
-                <img src={member.img} alt={member.name} className="w-48 h-32 rounded-full mx-auto" />
+               
                 <h3 className="text-xl font-semibold mt-4">{member.name}</h3>
                 <p className="text-gray-600">{member.role}</p>
+                <p className="text-gray-600">{member.Contact}</p>
               </div>
             ))}
           </div>
         </div>
+
+        <div className="max-w-md mx-auto bg-gradient-to-br from-white to-gray-100 rounded-2xl shadow-xl overflow-hidden md:max-w-2xl my-8 border border-gray-200">
+  <div className="p-8">
+    <h2 className="text-2xl font-extrabold text-gray-800 text-center mb-4">📩 Contact Us</h2>
+    <p className="text-center text-gray-600 text-lg leading-relaxed">
+      Have questions? Feel free to reach out to us. We're happy to help! 🎉
+    </p>
+
+    <div className="flex justify-center mt-6">
+      <a 
+        href="mailto:pointers2k25@gmail.com" 
+        className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-indigo-500 to-purple-600 text-white font-bold text-lg rounded-lg shadow-lg hover:scale-105 hover:shadow-xl transition-transform duration-300"
+      >
+        ✉️ Send Email
+      </a>
+    </div>
+  </div>
+</div>
+
 
 
         <div className="py-8 px-4 mx-auto">
