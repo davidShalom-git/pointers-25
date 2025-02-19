@@ -25,7 +25,7 @@ const Code = () => {
     }
 
     try {
-      const response = await axios.post("https://pointers.onrender.com/api/cse/code", formData);
+      const response = await axios.post("https://pointers-25.onrender.com", formData);
       console.log("Registration Successful:", response.data);
 
       setIsRegistered(true);
