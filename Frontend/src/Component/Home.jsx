@@ -246,17 +246,17 @@ const Home = () => {
         <div className="py-16 text-center">
           <h2 className="text-3xl font-bold text-gray-300">Student Organizers</h2>
           <div className="flex overflow-x-auto py-4 gap-10 mt-10">
-            {[{ name: "Mohan S", role: "IV Year", Contact: "+91 8883214777" },
-            {name: "Adithya Srinivasan", role: "IV Year", Contact: "+91 9150889141" },
-            {name: "Yuvaraj K", role: "IV Year", Contact: "+91 6369644323" },
-            {name: "Balu S", role: "IV Year", Contact: "+91 9677379586" },
-            {name: "Logeshwari", role: "IV Year", Contact: "+91 9790970202" },
-            {name: "Mohan S", role: "IV Year", Contact: "+91 8883214777" },].map((member, index) => (
+            {[{ name: "Mohan S", role: "IV Year" },
+            {name: "Adithya Srinivasan", role: "IV Year" },
+            {name: "Yuvaraj K", role: "IV Year",},
+            {name: "Balu S", role: "IV Year",},
+            {name: "Logeshwari", role: "IV Year" },
+            {name: "Mohan S", role: "IV Year" },].map((member, index) => (
               <div key={index} className="min-w-[300px] text-center shadow-lg p-5 rounded-lg bg-white">
                
                 <h3 className="text-xl font-semibold mt-4">{member.name}</h3>
                 <p className="text-gray-600">{member.role}</p>
-                <p className="text-gray-600">{member.Contact}</p>
+             
               </div>
             ))}
           </div>
