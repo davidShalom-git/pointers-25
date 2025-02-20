@@ -231,12 +231,12 @@ const Home = () => {
             { name: "Mrs.K.M.Banupriya", role: "AP/CSE" ,desgination: "CO-ORDINATOR"},
             { name: "Mrs.R.Kalaivanisri", role: "AP/CSE" ,desgination: "CO-ORDINATOR"},
             { name: "Mrs.P.Nithya", role: "AP/CSE", desgination: "ORGANIZING COMMITTEE" },
+            { name: "Mrs.A.Winni De Leo", role: "AP/CSE",desgination: "ORGANIZING COMMITTEE" },
             { name: "Ms.M.Sowndharya", role: "AP/CSE",desgination: "ORGANIZING COMMITTEE" },
             { name: "Mr.K.Neelamegam", role: "AP/CSE", desgination: "ORGANIZING COMMITTEE" },
             { name: "Mrs.M.Maheshwari", role: "AP/CSE", desgination: "ORGANIZING COMMITTEE" },
             { name: "Mrs.F.Faziyudeen", role: "AP/CSE",desgination: "ORGANIZING COMMITTEE" },
             { name: "Mrs.S.Lalitha", role: "AP/CSE",desgination: "ORGANIZING COMMITTEE" },
-            { name: "Mrs.A.Winni De Leo", role: "AP/CSE",desgination: "ORGANIZING COMMITTEE" },
           ].map((member, index) => (
               <div key={index} className="min-w-[300px] text-center shadow-lg p-5 rounded-lg bg-white">
                 
