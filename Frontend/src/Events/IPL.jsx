@@ -8,16 +8,16 @@ const Code = () => {
     >
       {/* Form Container */}
       <div className="relative w-full h-full flex flex-col lg:flex-row items-center justify-evenly bg-fixed bg-cover bg-center lg:mt-20 mt-64 p-4 space-y-8 lg:space-y-0 lg:space-x-8">
-        <div className="bg-white flex-1 p-8 rounded-2xl shadow-2xl border border-gray-300 mb-8 lg:mb-0 max-w-lg">
+        <div className="bg-white flex-1 p-8 rounded-2xl shadow-2xl border border-gray-300 mb-8 lg:mb-0 max-w-lg ">
           <h1 className="text-center text-3xl font-extrabold mb-6 text-gray-800">📜 Rules & Guidelines</h1>
           <ul className="text-gray-700 list-decimal list-inside space-y-3 text-lg leading-relaxed">
-            <li>Submit research papers before the deadline.</li>
-            <li>Papers must be original and unpublished elsewhere.</li>
-            <li>Topics must be relevant to the provided themes.</li>
-            <li>The judges' decisions are final and binding.</li>
-            <li>Plagiarism should be below 10-15% with proper citations.</li>
-            <li>Teams should have 3 to 4 participants.</li>
-            <li>Each participant gets 8-10 minutes to present their paper.</li>
+            <li>Get ready for a game of misheard words, hilarious guesses, and lots of laughter! One person will wear noise  cancelling headphones with loud music playing, while another says a phrase out loud.</li>
+            <li>The person wearing the headphones must try to read the speaker's lips and guess what they are saying.</li>
+            <li>A Team Has 2 Members </li>
+            <li>It has 3 Rounds</li>
+            <li>Each Round Contains 5 Questions</li>
+            <li>Electronic Devices are not Allowed</li>
+            <li>Hand Gestures are Strictly Prohibited</li>
           </ul>
 
           {/* Button to Navigate to Google Form */}

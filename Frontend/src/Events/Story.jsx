@@ -7,17 +7,21 @@ const Code = () => {
       style={{ backgroundImage: `url(${bk})` }}
     >
       {/* Form Container */}
-      <div className="relative w-full h-full flex flex-col lg:flex-row items-center justify-evenly bg-fixed bg-cover bg-center lg:mt-20 mt-64 p-4 space-y-8 lg:space-y-0 lg:space-x-8">
+      <div className="relative w-full h-full flex flex-col lg:flex-row items-center justify-evenly bg-fixed bg-cover bg-center lg:mt-20 mt-20 p-4 space-y-8 lg:space-y-0 lg:space-x-8">
         <div className="bg-white flex-1 p-8 rounded-2xl shadow-2xl border border-gray-300 mb-8 lg:mb-0 max-w-lg">
           <h1 className="text-center text-3xl font-extrabold mb-6 text-gray-800">📜 Rules & Guidelines</h1>
           <ul className="text-gray-700 list-decimal list-inside space-y-3 text-lg leading-relaxed">
-            <li>Submit research papers before the deadline.</li>
-            <li>Papers must be original and unpublished elsewhere.</li>
-            <li>Topics must be relevant to the provided themes.</li>
-            <li>The judges' decisions are final and binding.</li>
-            <li>Plagiarism should be below 10-15% with proper citations.</li>
+            <p className="text-bold text-xl">Description</p>
+            <p className="text-bold mb-10">Every great tale begins with a single idea just like that Story building is all about crafting compelling characters, exciting plots, and immersive worlds</p>
+            <p className="text-bold text-xl">Pictures</p>
+            <p className="text-bold mb-10">It is a visual puzzle or game where participants are shown a series of images and must identify the common theme, word, phrase, or concept that links them together. It helps to think the participants outside the box and make logical or creative associations between different pictures. </p>
+            <p className="text-bold text-xl">Spin Wheel</p>
+            <p className="text-bold mb-10">A wheel is divided into sections with different options, and writers spin it to determine aspects of their story. </p>
+            <li>There are 2 Rounds in this event</li>
+            <li>A Team Should has 2 Members</li>
+            <li>Each Team Carries 4 Minutes</li>
+            <li>Electronic Devices are Not Allowed</li>
             <li>Teams should have 3 to 4 participants.</li>
-            <li>Each participant gets 8-10 minutes to present their paper.</li>
           </ul>
 
           {/* Button to Navigate to Google Form */}

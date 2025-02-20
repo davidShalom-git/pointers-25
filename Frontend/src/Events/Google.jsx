@@ -11,13 +11,15 @@ const Code = () => {
         <div className="bg-white flex-1 p-8 rounded-2xl shadow-2xl border border-gray-300 mb-8 lg:mb-0 max-w-lg">
           <h1 className="text-center text-3xl font-extrabold mb-6 text-gray-800">📜 Rules & Guidelines</h1>
           <ul className="text-gray-700 list-decimal list-inside space-y-3 text-lg leading-relaxed">
-            <li>Submit research papers before the deadline.</li>
-            <li>Papers must be original and unpublished elsewhere.</li>
-            <li>Topics must be relevant to the provided themes.</li>
-            <li>The judges' decisions are final and binding.</li>
-            <li>Plagiarism should be below 10-15% with proper citations.</li>
-            <li>Teams should have 3 to 4 participants.</li>
-            <li>Each participant gets 8-10 minutes to present their paper.</li>
+            <li>Team Composition: Players can participate in teams (as per event rules)..</li>
+            <li>Time Limit: Each round should have a fixed time limit (e.g., 60 seconds per guess).</li>
+            <li>Point System: Points are awarded based on the accuracy and speed of guesses.</li>
+            <li>Device Usage: Participants can or cannot use mobile phones, depending on the format (decide whether it's an open-knowledge game or restricted).</li>
+            <li>Players are shown a location on Google Maps, Street View, or an image, and they must guess the exact place.</li>
+            <li>Players are given hints or riddles about famous places.</li>
+            <li>They must identify the location within the time limit</li>
+            <li>No searching on Google (if you want a purely knowledge-based game).</li>
+            <li>Accuracy of the guess (closer = more points),Time taken (faster = bonus points).</li>
           </ul>
 
           {/* Button to Navigate to Google Form */}

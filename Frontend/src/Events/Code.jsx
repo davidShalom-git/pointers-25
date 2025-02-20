@@ -11,13 +11,16 @@ const Code = () => {
         <div className="bg-white flex-1 p-8 rounded-2xl shadow-2xl border border-gray-300 mb-8 lg:mb-0 max-w-lg">
           <h1 className="text-center text-3xl font-extrabold mb-6 text-gray-800">📜 Rules & Guidelines</h1>
           <ul className="text-gray-700 list-decimal list-inside space-y-3 text-lg leading-relaxed">
-            <li>Submit research papers before the deadline.</li>
-            <li>Papers must be original and unpublished elsewhere.</li>
-            <li>Topics must be relevant to the provided themes.</li>
-            <li>The judges' decisions are final and binding.</li>
-            <li>Plagiarism should be below 10-15% with proper citations.</li>
-            <li>Teams should have 3 to 4 participants.</li>
-            <li>Each participant gets 8-10 minutes to present their paper.</li>
+            <li>Individual participants only.</li>
+            <li>Accepted languages: C++, Python, Java.</li>
+            <li>Buggy code will be provided with each problem description.</li>
+            <li>Participants will be penalized for writing their own solution to the given problem. You need to fix the given code and then submit it.</li>
+            <li>Preliminary Round: Each participant will be given a set of 10 buggy codes with some syntactical errors.</li>
+            <li>Preliminary Round: Points will be awarded for debugging each error.</li>
+            <li>Preliminary Round: Duration is 30 minutes.</li>
+            <li>Preliminary Round: Only the top 7 participants will be selected for the final round.</li>
+            <li>Final Round: A set of 2 questions will be given to each candidate.</li>
+            <li>Final Round: The top 3 winners will be awarded exciting cash prizes.</li>
           </ul>
 
           {/* Button to Navigate to Google Form */}

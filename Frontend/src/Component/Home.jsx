@@ -108,7 +108,7 @@ const Home = () => {
 
   const questions = [
     { question: "Who can participate?", answer: "Students from various engineering branches can participate." },
-    { question: "How many events can students participate in?", answer: "Students can participate in one event only." },
+    { question: "How many events can students participate in?", answer: "Students can participate Two Technical events and Two Non-Tecnical Events." },
     { question: "Will food be provided during the event?", answer: "Yes, food is available for participants. Accommodation is also available upon prior request." },
     { question: "Is the amount refundable?", answer: "No." },
     { question: "Will participation certificates be provided?", answer: "Yes." },
@@ -221,46 +221,53 @@ const Home = () => {
         </div>
 
         <div id="organizer" className="py-16 text-center">
-          <h2 className="text-3xl font-bold text-gray-300">Staff's Organizers</h2>
+          <h2 className="text-3xl font-extrabold text-gray-300">Staff's Organizers</h2>
 
           <div className="flex overflow-x-auto py-4 gap-10 mt-10">
-            {[{ name: "Mr.N.Anandhakumar", role: "AP/CSE" },
-            { name: "Mr.K.Neelamegam", role: "AP/CSE" },
-            { name: "Mrs.V.Umadevi", role: "HOD/CSE" },
-            { name: "Mrs.G.Shoba", role: "AP/CSE" },
-            { name: "Mrs.P.Nithya", role: "AP/CSE" },
-            { name: "Mrs.M.Maheshwari", role: "AP/CSE" },
-            { name: "Mrs.R.Kalaivanisri", role: "AP/CSE" },
-            { name: "Mrs.F.Faziyudeen", role: "AP/CSE" },
-            { name: "Mrs.K.M.Banupriya", role: "AP/CSE" },
-            { name: "Ms.M.Sowndharya", role: "AP/CSE" },].map((member, index) => (
+            {[
+            { name: "Mrs.V.Umadevi", role: "HOD/CSE", desgination: "CONVENER" },
+            { name: "Mrs.G.Shoba", role: "AP/CSE",desgination: "CO-CONVENER" },
+            { name: "Mr.N.Anandhakumar", role: "AP/CSE" , desgination: "CO-ORDINATOR"},
+            { name: "Mrs.K.M.Banupriya", role: "AP/CSE" ,desgination: "CO-ORDINATOR"},
+            { name: "Mrs.R.Kalaivanisri", role: "AP/CSE" ,desgination: "CO-ORDINATOR"},
+            { name: "Mrs.P.Nithya", role: "AP/CSE", desgination: "ORGANIZING COMMITTEE" },
+            { name: "Ms.M.Sowndharya", role: "AP/CSE",desgination: "ORGANIZING COMMITTEE" },
+            { name: "Mr.K.Neelamegam", role: "AP/CSE", desgination: "ORGANIZING COMMITTEE" },
+            { name: "Mrs.M.Maheshwari", role: "AP/CSE", desgination: "ORGANIZING COMMITTEE" },
+            { name: "Mrs.F.Faziyudeen", role: "AP/CSE",desgination: "ORGANIZING COMMITTEE" },
+            { name: "Mrs.S.Lalitha", role: "AP/CSE",desgination: "ORGANIZING COMMITTEE" },
+            { name: "Mrs.A.Winni De Leo", role: "AP/CSE",desgination: "ORGANIZING COMMITTEE" },
+          ].map((member, index) => (
               <div key={index} className="min-w-[300px] text-center shadow-lg p-5 rounded-lg bg-white">
                 
                 <h3 className="text-xl font-semibold mt-4">{member.name}</h3>
                 <p className="text-gray-600">{member.role}</p>
+                <p className="text-gray-600">{member.desgination}</p>
               </div>
             ))}
           </div>
         </div>
 
         <div className="py-16 text-center">
-          <h2 className="text-3xl font-bold text-gray-300">Student Organizers</h2>
+          <h2 className="text-3xl font-extrabold text-gray-300">Student Organizers</h2>
           <div className="flex overflow-x-auto py-4 gap-10 mt-10">
-            {[{ name: "Mohan S", role: "IV Year" },
-            {name: "Adithya Srinivasan", role: "IV Year" },
-            {name: "Yuvaraj K", role: "IV Year",},
-            {name: "Balu S", role: "IV Year",},
-            {name: "Logeshwari", role: "IV Year" },
-            {name: "Mohan S", role: "IV Year" },
-            {name: "R.P Haripriya", role: "IV Year" },
-            {name: "S.Harini", role: "IV Year" },
-            {name: "K.B.Akshaya", role: "IV Year" },
-            {name: "Yoogasri V", role: "IV Year" },
+            {[{ name: "Mr.S.Mohan", role: "IV Year",desgination: "PRESIDENT" },
+            {name: "Ms.V.Yoogasri", role: "IV Year",desgination: "VICE-PRESIDENT" },
+            {name: "Mr.Y.S.Adithya Srinivas", role: "IV Year" , desgination: "SECRETARY"},
+            {name: "Mr.K.Yuvaraj", role: "IV Year", desgination: 'JOINT SECRETARY'},
+            {name: "Mr.S.Balu", role: "IV Year",desgination: "TREASURER" }, 
+            {name: "Ms.S.Harini", role: "IV Year",desgination: "JOINT TREASURER" },
+            {name: "Ms.V.Logeshwari", role: "IV Year",desgination: "PROGRAMME ORGANIZER" },
+            {name: "Ms.S.A.Sherly", role: "IV Year",desgination: 'CO-PROGRAMME ORGANIZER' },
+            {name: "Ms.R.P.Haripriya", role: "IV Year",desgination: 'DTP CO-ORDINATOR' },
+            {name: "Ms.K.B.Akshaya", role: "IV Year",desgination: 'TECHNICAL SCRUTINIZER' },
+            {name: "Mr.B.S.Venkatanathan", role: "IV Year",desgination: 'HEAD OF MULTIMEDIA' },
           ].map((member, index) => (
               <div key={index} className="min-w-[300px] text-center shadow-lg p-5 rounded-lg bg-white">
                
                 <h3 className="text-xl font-semibold mt-4">{member.name}</h3>
                 <p className="text-gray-600">{member.role}</p>
+                <p className="text-gray-600">{member.desgination}</p>
              
               </div>
             ))}
@@ -273,6 +280,12 @@ const Home = () => {
     <p className="text-center text-gray-600 text-lg leading-relaxed">
       Have questions? Feel free to reach out to us. We're happy to help! 🎉
     </p>
+    <p className="text-center text-xl mt-5 text-gray-600">S.Mohan</p>
+    <p className="text-center text-xl text-gray-600">+91 8883214777</p>
+    <p className="text-center text-xl mt-5 text-gray-600">V.Logeshwari</p>
+    <p className="text-center text-xl text-gray-600">+91 9790970202</p>
+    <p className="text-center text-xl mt-5 text-gray-600">S.Balu</p>
+    <p className="text-center text-xl text-gray-600">+91 9677379586</p>
 
     <div className="flex justify-center mt-6">
       <a 

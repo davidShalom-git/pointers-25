@@ -11,13 +11,15 @@ const Code = () => {
         <div className="bg-white flex-1 p-8 rounded-2xl shadow-2xl border border-gray-300 mb-8 lg:mb-0 max-w-lg">
           <h1 className="text-center text-3xl font-extrabold mb-6 text-gray-800">📜 Rules & Guidelines</h1>
           <ul className="text-gray-700 list-decimal list-inside space-y-3 text-lg leading-relaxed">
-            <li>Submit research papers before the deadline.</li>
-            <li>Papers must be original and unpublished elsewhere.</li>
-            <li>Topics must be relevant to the provided themes.</li>
-            <li>The judges' decisions are final and binding.</li>
-            <li>Plagiarism should be below 10-15% with proper citations.</li>
-            <li>Teams should have 3 to 4 participants.</li>
-            <li>Each participant gets 8-10 minutes to present their paper.</li>
+            <li>Participants must Register before the event starts. Late Entries will not be Entertained.</li>
+            <li>The Quiz will be Conducted in multiple rounds (3 to 4 rounds)</li>
+            <li>Each Round will have a fixed time limit, and participants must submit their answers within the given time.</li>
+            <li>In Each round, only top-scoring contestants will proceed to the next stage. (Each round has elimination).</li>
+            <li>The quiz will be conducted in teams of two members, depending on event guidelines. (Per team should have 2 Members).</li>
+            <li>Use of Mobile phone or other digital device is strictly prohibited.</li>
+            <li>Any attempt to cheat, such as consulting sources or copying answers, will lead to immediate disqualification.</li>
+            <li>Winners will be awarded cash prizes as per guidelines</li>
+            <li>Participation Certificates will be given to all Contestants.</li>
           </ul>
 
           {/* Button to Navigate to Google Form */}
