@@ -42,47 +42,7 @@ const Home1 = () => {
     return (
         <>
         
-             {/* Navigation Bar */}
-             <nav ref={navRef} className="w-full fixed top-0 left-0  bg-opacity-80 text-white py-4 px-6 shadow-lg z-50">
-               <div className="container mx-auto flex items-center justify-between relative">
-                 
-                 {/* Logo */}
-                 <div className="flex items-center space-x-3">
-                   <img ref={imageRef} src={galaxy} alt="Galaxy Icon" className="h-10 w-10 animate-spin" />
-                  
-                 </div>
-       
-                 {/* Desktop Navigation - Centered */}
-                 <div className="absolute left-1/2 transform -translate-x-1/2 hidden md:block">
-                   <ul className="flex space-x-6 text-lg">
-                     <li><Link to="/home" className="hover:text-gray-400">Home</Link></li>
-                     <li><Link to="/technical" className="hover:text-gray-400">Events</Link></li>
-                 
-                     <li><Link to="/contact" className="hover:text-gray-400">About</Link></li>
-                   </ul>
-                 </div>
-       
-                 {/* Mobile Menu Button */}
-                 <button className="md:hidden" onClick={toggleMenu} aria-label="Toggle Menu">
-                   <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h16m-7 6h7"></path>
-                   </svg>
-                 </button>
-               </div>
-       
-               {/* Mobile Menu */}
-               {isOpen && (
-         <div className="md:hidden absolute top-full left-1/2 transform -translate-x-1/2 w-full bg-opacity-90 p-4">
-           <ul className="flex flex-col items-center space-y-4 text-lg">
-             <li><Link to="/home" className="hover:text-gray-400" onClick={closeMenu}>Home</Link></li>
-             <li><Link to="/technical" className="hover:text-gray-400" onClick={closeMenu}>Events</Link></li>
-            
-             <li><Link to="/about" className="hover:text-gray-400" onClick={closeMenu}>About</Link></li>
-           </ul>
-         </div>
-       )}
-       
-             </nav>
+             
         <div className="bg-fixed bg-center min-h-screen w-full" style={{ backgroundImage: `url(${bk})` }}>
             <div className="flex flex-col lg:flex-row md:flex-col justify-center items-center text-3xl mt-5 lg:mt-0 min-h-screen">
                 <div className='mx-auto text-center'>

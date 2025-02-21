@@ -14,7 +14,7 @@ import { Link } from "react-router-dom";
 import gsap from "gsap";
 import educate from "../assets/educate.jpg";
 import explore from "../assets/Explore.png";
-import point from '../assets/poin.jpg'
+import point from '../assets/point.jpg'
 import "../App.css";
 import galaxy from "../assets/galaxy.png";
 
@@ -112,6 +112,7 @@ const Home = () => {
     { question: "Will food be provided during the event?", answer: "Yes, food is available for participants. Accommodation is also available upon prior request." },
     { question: "Is the amount refundable?", answer: "No." },
     { question: "Will participation certificates be provided?", answer: "Yes." },
+    { question: "Is Transportation Available?", answer: "Yes, For Further Details Contact Us...." },
   ];
 
 
@@ -231,11 +232,11 @@ const Home = () => {
             { name: "Mr.K.Yuvaraj", role: "IV Year", desgination: 'JOINT SECRETARY' },
             { name: "Mr.S.Balu", role: "IV Year", desgination: "TREASURER" },
             { name: "Mr.R.Mithun Ragavendiran", role: "IV Year", desgination: 'HEAD OF MULTIMEDIA' },
-            { name: "Ms.V.Logeshwari", role: "IV Year", desgination: "PROGRAMME ORGANIZER" },
-            { name: "Mr.K.Bala Murugan", role: "IV Year", desgination: 'CO-PROGRAMME ORGANIZER' },
+            { name: "Ms.K.B.Akshaya", role: "IV Year", desgination: 'TECHNICAL SCRUTINIZER' },
             { name: "Ms.R.P.Haripriya", role: "IV Year", desgination: 'DTP CO-ORDINATOR' },
             { name: "Ms.S.Harini", role: "IV Year", desgination: "DTP CO-ORDINATOR" },
-            { name: "Ms.K.B.Akshaya", role: "IV Year", desgination: 'TECHNICAL SCRUTINIZER' },
+            { name: "Ms.V.Logeshwari", role: "IV Year", desgination: "PROGRAMME ORGANIZER" },
+            { name: "Mr.K.Bala Murugan", role: "IV Year", desgination: 'CO-PROGRAMME ORGANIZER' },
             ].map((member, index) => (
               <div key={index} className="min-w-[300px] text-center shadow-lg p-5 rounded-lg bg-white">
 
