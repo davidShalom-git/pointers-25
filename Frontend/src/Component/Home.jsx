@@ -221,8 +221,6 @@ const Home = () => {
           ))}
         </div>
 
-        
-
         <div className="py-16 text-center">
           <h2 className="text-3xl font-extrabold text-gray-300">Student Organizers</h2>
           <div className="flex overflow-x-auto py-4 gap-10 mt-10">
