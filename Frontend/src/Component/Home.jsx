@@ -159,13 +159,13 @@ const Home = () => {
         <div className="flex flex-col items-center justify-center text-center">
           <div className="relative w-full h-[100vh] flex items-center justify-center bg-black overflow-hidden">
             <h1 ref={pointerRef} className="absolute left-10 md:left-20 lg:left-5 top-1/2 transform -translate-y-1/2 text-5xl md:text-8xl lg:text-7xl text-white font-bold opacity-70 hidden lg:block">
-              POINTER'S
+              POINTERS
             </h1>
             <h1 ref={k25Ref} className="absolute right-10 md:right-20 lg:right-20 top-1/2 transform -translate-y-1/2 text-5xl md:text-8xl lg:text-7xl text-white font-bold opacity-70 hidden lg:block">
               2K25
             </h1>
             <h1 ref={pointerMobileRef} className="absolute top-12 mt-2 text-5xl md:text-8xl lg:text-8xl text-white font-bold opacity-70 lg:hidden space-y-3">
-              POINTER'S
+              POINTERS
             </h1>
             <h1 ref={k25MobileRef} className="absolute top-28 text-5xl md:text-8xl lg:text-8xl text-white font-bold opacity-70 lg:hidden space-y-2">
               2K25
@@ -178,9 +178,9 @@ const Home = () => {
 
         <div id='cse' className="flex flex-col md:flex-row items-center justify-between py-16 gap-10">
           <div className="w-full md:w-1/2 text-center md:text-left">
-            <h2 className="text-3xl font-bold text-white">Pointer's 2K25</h2>
+            <h2 className="text-3xl font-bold text-white">POINTERS 2K25</h2>
             <p className="text-lg text-gray-400 mt-4">
-              Join us for POINTER'S 2K25, a premier event where minds meet, ideas flourish, and visions come to life. Witness the pinnacle of technological innovation, engage with industry leaders, and be part of an experience that defines the future.
+              Join us for POINTERS 2K25, a premier event where minds meet, ideas flourish, and visions come to life. Witness the pinnacle of technological innovation, engage with industry leaders, and be part of an experience that defines the future.
             </p>
           </div>
           <div className="w-full md:w-[50%]">
@@ -189,8 +189,8 @@ const Home = () => {
         </div>
 
         <div className="text-center  w-full lg:ml-64 mb-10">
-          <ParallaxText baseVelocity={5}>Dept CSE </ParallaxText>
-          <ParallaxText baseVelocity={-5}>Pointer's 2K25</ParallaxText>
+          <ParallaxText baseVelocity={5}>Dept of CSE </ParallaxText>
+          <ParallaxText baseVelocity={-5}>Pointers 2K25</ParallaxText>
         </div>
 
 
@@ -220,83 +220,66 @@ const Home = () => {
           ))}
         </div>
 
-        <div id="organizer" className="py-16 text-center">
-          <h2 className="text-3xl font-extrabold text-gray-300">Staff's Organizers</h2>
-
-          <div className="flex overflow-x-auto py-4 gap-10 mt-10">
-            {[
-            { name: "Mrs.V.Umadevi", role: "HOD/CSE", desgination: "CONVENER" },
-            { name: "Mrs.G.Shoba", role: "AP/CSE",desgination: "CO-CONVENER" },
-            { name: "Mr.N.Anandhakumar", role: "AP/CSE" , desgination: "CO-ORDINATOR"},
-            { name: "Mrs.K.M.Banupriya", role: "AP/CSE" ,desgination: "CO-ORDINATOR"},
-            { name: "Mrs.R.Kalaivanisri", role: "AP/CSE" ,desgination: "CO-ORDINATOR"},
-            { name: "Mrs.P.Nithya", role: "AP/CSE", desgination: "ORGANIZING COMMITTEE" },
-            { name: "Mrs.A.Winni De Leo", role: "AP/CSE",desgination: "ORGANIZING COMMITTEE" },
-            { name: "Ms.M.Sowndharya", role: "AP/CSE",desgination: "ORGANIZING COMMITTEE" },
-            { name: "Mr.K.Neelamegam", role: "AP/CSE", desgination: "ORGANIZING COMMITTEE" },
-            { name: "Mrs.M.Maheshwari", role: "AP/CSE", desgination: "ORGANIZING COMMITTEE" },
-            { name: "Mrs.F.Faziyudeen", role: "AP/CSE",desgination: "ORGANIZING COMMITTEE" },
-            { name: "Mrs.S.Lalitha", role: "AP/CSE",desgination: "ORGANIZING COMMITTEE" },
-          ].map((member, index) => (
-              <div key={index} className="min-w-[300px] text-center shadow-lg p-5 rounded-lg bg-white">
-                
-                <h3 className="text-xl font-semibold mt-4">{member.name}</h3>
-                <p className="text-gray-600">{member.role}</p>
-                <p className="text-gray-600">{member.desgination}</p>
-              </div>
-            ))}
-          </div>
-        </div>
+        
 
         <div className="py-16 text-center">
           <h2 className="text-3xl font-extrabold text-gray-300">Student Organizers</h2>
           <div className="flex overflow-x-auto py-4 gap-10 mt-10">
-            {[{ name: "Mr.S.Mohan", role: "IV Year",desgination: "PRESIDENT" },
-            {name: "Ms.V.Yoogasri", role: "IV Year",desgination: "VICE-PRESIDENT" },
-            {name: "Mr.Y.S.Adithya Srinivas", role: "IV Year" , desgination: "SECRETARY"},
-            {name: "Mr.K.Yuvaraj", role: "IV Year", desgination: 'JOINT SECRETARY'},
-            {name: "Mr.S.Balu", role: "IV Year",desgination: "TREASURER" }, 
-            {name: "Ms.S.Harini", role: "IV Year",desgination: "JOINT TREASURER" },
-            {name: "Ms.V.Logeshwari", role: "IV Year",desgination: "PROGRAMME ORGANIZER" },
-            {name: "Ms.S.A.Sherly", role: "IV Year",desgination: 'CO-PROGRAMME ORGANIZER' },
-            {name: "Ms.R.P.Haripriya", role: "IV Year",desgination: 'DTP CO-ORDINATOR' },
-            {name: "Ms.K.B.Akshaya", role: "IV Year",desgination: 'TECHNICAL SCRUTINIZER' },
-            {name: "Mr.B.S.Venkatanathan", role: "IV Year",desgination: 'HEAD OF MULTIMEDIA' },
-          ].map((member, index) => (
+            {[{ name: "Mr.S.Mohan", role: "IV Year", desgination: "PRESIDENT" },
+            { name: "Mr.K.Nityananda", role: "IV Year", desgination: "VICE-PRESIDENT" },
+            { name: "Mr.Y.S.Adithya Srinivas", role: "IV Year", desgination: "SECRETARY" },
+            { name: "Mr.K.Yuvaraj", role: "IV Year", desgination: 'JOINT SECRETARY' },
+            { name: "Mr.S.Balu", role: "IV Year", desgination: "TREASURER" },
+            { name: "Mr.R.Mithun Ragavendiran", role: "IV Year", desgination: 'HEAD OF MULTIMEDIA' },
+            { name: "Ms.V.Logeshwari", role: "IV Year", desgination: "PROGRAMME ORGANIZER" },
+            { name: "Mr.K.Bala Murugan", role: "IV Year", desgination: 'CO-PROGRAMME ORGANIZER' },
+            { name: "Ms.R.P.Haripriya", role: "IV Year", desgination: 'DTP CO-ORDINATOR' },
+            { name: "Ms.S.Harini", role: "IV Year", desgination: "DTP CO-ORDINATOR" },
+            { name: "Ms.K.B.Akshaya", role: "IV Year", desgination: 'TECHNICAL SCRUTINIZER' },
+            ].map((member, index) => (
               <div key={index} className="min-w-[300px] text-center shadow-lg p-5 rounded-lg bg-white">
-               
+
                 <h3 className="text-xl font-semibold mt-4">{member.name}</h3>
                 <p className="text-gray-600">{member.role}</p>
                 <p className="text-gray-600">{member.desgination}</p>
-             
+
               </div>
             ))}
           </div>
         </div>
 
         <div className="max-w-md mx-auto bg-gradient-to-br from-white to-gray-100 rounded-2xl shadow-xl overflow-hidden md:max-w-2xl my-8 border border-gray-200">
-  <div className="p-8">
-    <h2 className="text-2xl font-extrabold text-gray-800 text-center mb-4">📩 Contact Us</h2>
-    <p className="text-center text-gray-600 text-lg leading-relaxed">
-      Have questions? Feel free to reach out to us. We're happy to help! 🎉
-    </p>
-    <p className="text-center text-xl mt-5 text-gray-600">S.Mohan</p>
-    <p className="text-center text-xl text-gray-600">+91 8883214777</p>
-    <p className="text-center text-xl mt-5 text-gray-600">V.Logeshwari</p>
-    <p className="text-center text-xl text-gray-600">+91 9790970202</p>
-    <p className="text-center text-xl mt-5 text-gray-600">S.Balu</p>
-    <p className="text-center text-xl text-gray-600">+91 9677379586</p>
+          <div className="p-8">
+            <h2 className="text-2xl font-extrabold text-gray-800 text-center mb-4">📩 Contact Us</h2>
+            <p className="text-center text-gray-600 text-lg leading-relaxed">
+              Have questions? Feel free to reach out to us. We're happy to help! 🎉
+            </p>
+           
+            <p className="text-center text-xl text-gray-600 mt-5">+91 8883214777</p>
+        
+            <p className="text-center text-xl text-gray-600">+91 9790970202</p>
+           
+            <p className="text-center text-xl text-gray-600">+91 9677379586</p>
 
-    <div className="flex justify-center mt-6">
-      <a 
-        href="mailto:pointers2k25@gmail.com" 
-        className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-indigo-500 to-purple-600 text-white font-bold text-lg rounded-lg shadow-lg hover:scale-105 hover:shadow-xl transition-transform duration-300"
-      >
-        ✉️ Send Email
-      </a>
-    </div>
-  </div>
-</div>
+            <div className="flex justify-center mt-6">
+              <a
+                href="mailto:pointers2k25@gmail.com"
+                className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-indigo-500 to-purple-600 text-white font-bold text-lg rounded-lg shadow-lg hover:scale-105 hover:shadow-xl transition-transform duration-300"
+              >
+                ✉️ Send Email
+              </a>
+            </div>
+          </div>
+        </div>
+
+
+        <div className="text-center text-blue-500 font-bold text-2xl mt-20">
+          🚀 On-Spot Registration is also Available! 🚀
+        </div>
+        <div className="text-center text-gray-400 text-xl mb-16">
+          Join the excitement and register on-site today!
+        </div>
+
 
 
 

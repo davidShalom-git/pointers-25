@@ -19,15 +19,28 @@ const Code = () => {
             <li>Teams should have 3 to 4 participants.</li>
             <li>Each participant gets 8-10 minutes to present their paper.</li>
           </ul>
+        </div>
 
-          {/* Button to Navigate to Google Form */}
-          <div className="text-center mt-8">
-            <a href="https://forms.gle/HwwfL6YbkFuY44aR6" target="_blank" rel="noopener noreferrer">
-              <button className="px-8 py-3 bg-gradient-to-r from-blue-500 to-blue-700 text-white font-semibold rounded-lg shadow-md hover:scale-105 transition-all duration-300">
-                Register Now
-              </button>
-            </a>
-          </div>
+        {/* Register Button */}
+        <div className="text-center mt-8 flex-shrink-0">
+          <a href="https://forms.gle/HwwfL6YbkFuY44aR6" target="_blank" rel="noopener noreferrer">
+            <button className="px-8 py-3 bg-gradient-to-r from-blue-500 to-blue-700 text-white font-semibold rounded-lg shadow-md hover:scale-105 transition-all duration-300">
+              Register Now
+            </button>
+          </a>
+        </div>
+
+        <div className="bg-white flex-1 p-8 rounded-2xl shadow-2xl border border-gray-300 mb-8 lg:mb-0 max-w-lg">
+          <h1 className="text-center text-3xl font-extrabold mb-6 text-gray-800">📜 Rules & Guidelines</h1>
+          <ul className="text-gray-700 list-decimal list-inside space-y-3 text-lg leading-relaxed">
+            <li>Submit research papers before the deadline.</li>
+            <li>Papers must be original and unpublished elsewhere.</li>
+            <li>Topics must be relevant to the provided themes.</li>
+            <li>The judges' decisions are final and binding.</li>
+            <li>Plagiarism should be below 10-15% with proper citations.</li>
+            <li>Teams should have 3 to 4 participants.</li>
+            <li>Each participant gets 8-10 minutes to present their paper.</li>
+          </ul>
         </div>
       </div>
     </div>
