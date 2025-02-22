@@ -12,13 +12,19 @@ const Code = () => {
           <h1 className="text-center text-3xl font-extrabold mb-6 text-gray-800">📜 Rules & Guidelines</h1>
           <h1 className="text-center text-3xl font-bold mb-6 text-gray-800">BGMI</h1>
           <ul className="text-gray-700 list-decimal list-inside space-y-3 text-lg leading-relaxed">
-            <li>Submit research papers before the deadline.</li>
-            <li>Papers must be original and unpublished elsewhere.</li>
-            <li>Topics must be relevant to the provided themes.</li>
-            <li>The judges' decisions are final and binding.</li>
-            <li>Plagiarism should be below 10-15% with proper citations.</li>
-            <li>Teams should have 3 to 4 participants.</li>
-            <li>Each participant gets 8-10 minutes to present their paper.</li>
+            <li>Players are not allowed to use any form of external assistance or cheat software. You can be disqualified for using hacks or third-party programs.
+            </li>
+            <li>Disrespectful language, trolling, or any disruptive behaviour toward opponents, organizers, or officials can lead to a team being disqualified.
+            </li>
+            <li>Teams must complete their registration on the official platform before the tournament begins.
+            </li>
+            <li>The game will be conducted over two days, with players divided into two batches.
+            </li>
+            <li>If you are involved in another event on day one, you will take part in day two.
+            </li>
+            <li>Player’s devices and software may be checked before and after matches.</li>
+            <li>Erangal (only squads are allowed )</li>
+            <li>TDM (1 VS 1)</li>
           </ul>
         </div>
 
@@ -35,13 +41,14 @@ const Code = () => {
           <h1 className="text-center text-3xl font-extrabold mb-6 text-gray-800">📜 Rules & Guidelines</h1>
           <h1 className="text-center text-3xl font-bold mb-6 text-gray-800">Free Fire</h1>
           <ul className="text-gray-700 list-decimal list-inside space-y-3 text-lg leading-relaxed">
-            <li>Submit research papers before the deadline.</li>
-            <li>Papers must be original and unpublished elsewhere.</li>
-            <li>Topics must be relevant to the provided themes.</li>
-            <li>The judges' decisions are final and binding.</li>
-            <li>Plagiarism should be below 10-15% with proper citations.</li>
-            <li>Teams should have 3 to 4 participants.</li>
-            <li>Each participant gets 8-10 minutes to present their paper.</li>
+            <li>Players are not allowed to use any form of external assistance or cheat software. You can be disqualified for using hacks or third-party programs..</li>
+            <li>Disrespectful language, trolling, or any disruptive behaviour toward opponents, organizers, or officials can lead to a team being disqualified.</li>
+            <li>Teams must complete their registration on the official platform before the tournament begins.</li>
+            <li>The game will be conducted over two days, with players divided into two batches.</li>
+            <li>If you are involved in another event on day one, you will take part in day two.</li>
+            <li>Player’s devices and software may be checked before and after matches.</li>
+            <li>Participants will also receive a participation certificate.</li>
+           
           </ul>
         </div>
       </div>
