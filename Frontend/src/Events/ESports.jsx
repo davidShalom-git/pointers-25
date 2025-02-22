@@ -25,6 +25,8 @@ const Code = () => {
             <li>Player’s devices and software may be checked before and after matches.</li>
             <li>Erangal (only squads are allowed )</li>
             <li>TDM (1 VS 1)</li>
+            <li>Winners Will Get Exciting Prices</li>
+            <li>Participants will also receive a participation certificate.</li>
           </ul>
         </div>
 
@@ -47,8 +49,8 @@ const Code = () => {
             <li>The game will be conducted over two days, with players divided into two batches.</li>
             <li>If you are involved in another event on day one, you will take part in day two.</li>
             <li>Player’s devices and software may be checked before and after matches.</li>
+            <li>Winners Will Get Exciting Prices</li>
             <li>Participants will also receive a participation certificate.</li>
-           
           </ul>
         </div>
       </div>
