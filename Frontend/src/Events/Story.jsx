@@ -26,7 +26,7 @@ const Code = () => {
 
           {/* Button to Navigate to Google Form */}
           <div className="text-center mt-8">
-            <a href="https://forms.gle/HwwfL6YbkFuY44aR6" target="_blank" rel="noopener noreferrer">
+            <a href="https://forms.gle/g9svm2eXapaesefy7" target="_blank" rel="noopener noreferrer">
               <button className="px-8 py-3 bg-gradient-to-r from-blue-500 to-blue-700 text-white font-semibold rounded-lg shadow-md hover:scale-105 transition-all duration-300">
                 Register Now
               </button>
