@@ -68,7 +68,7 @@ const Home1 = () => {
                         loop={false} 
                     />
                     <h4 className='mt-5 text-white text-xl'>Empowering Innovation, Transforming the Future.</h4>
-                    <button className='mt-5 bg-white text-black px-9 rounded-xl shadow-lg transition-transform transform hover:scale-105 hover:bg-gray-200'>
+                    <button className='mt-5 bg-white text-black px-9 rounded-[40px] shadow-lg transition-transform transform hover:scale-105 hover:bg-gray-200'>
                         <Link to='/home' className='text-2xl'>Explore</Link>
                     </button>
                 </div>
