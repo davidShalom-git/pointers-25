@@ -175,19 +175,47 @@ const Home = () => {
           </div>
         </div>
 
+        <section id="cse" className="py-20 px-6 md:px-16 text-white">
+      <div className="max-w-6xl mx-auto flex flex-col md:flex-row items-center justify-between gap-10">
+        
+        {/* Left Section */}
+        <motion.div 
+          className="w-full md:w-1/2 text-center md:text-left"
+          initial={{ opacity: 0, x: -50 }}
+          animate={{ opacity: 1, x: 0 }}
+          transition={{ duration: 0.8 }}
+        >
+          <h2 className="text-4xl font-extrabold bg-clip-text text-transparent bg-gradient-to-r from-yellow-400 to-orange-500">
+            POINTERS 2K25
+          </h2>
+          <p className="text-lg text-gray-300 mt-4 leading-relaxed">
+            🚀 <span className="font-semibold text-yellow-400">Join Us for POINTERS 2K25</span> – National Level Technical Symposium!<br />
+            📅 <span className="font-semibold text-blue-400">Date:</span> March 11-12, 2025<br />
+            📍 <span className="font-semibold text-green-400">Venue:</span> Arunai Engineering College..<br />
+            <span className="block mt-3">Unleash your <span className="text-purple-400 font-semibold">creativity, innovation,</span> and <span className="text-red-400 font-semibold">technical skills</span> at POINTERS 2K25!</span> 
+            Participate in <span className="font-semibold text-pink-400">exciting tech events</span>, coding challenges, workshops, and more while networking with industry experts.
+            <br /><br />
+            💡 <span className="text-orange-400 font-semibold">Showcase your talent</span>, compete, learn, and win exciting prizes!<br />
+            🔗 Stay tuned for registrations and event updates. Be a part of this <span className="text-cyan-400 font-semibold">mega tech fest</span>!
+          </p>
+        </motion.div>
 
+        {/* Right Section - Image */}
+        <motion.div 
+          className="w-full md:w-[50%]"
+          initial={{ opacity: 0, x: 50 }}
+          animate={{ opacity: 1, x: 0 }}
+          transition={{ duration: 0.8 }}
+        >
+          <img 
+            src={point} 
+            alt="Team" 
+            className="rounded-lg shadow-2xl w-full hover:scale-105 transition-transform duration-300"
+          />
+        </motion.div>
 
-        <div id='cse' className="flex flex-col md:flex-row items-center justify-between py-16 gap-10">
-          <div className="w-full md:w-1/2 text-center md:text-left">
-            <h2 className="text-3xl font-bold text-white">POINTERS 2K25</h2>
-            <p className="text-lg text-gray-400 mt-4">
-              Join us for POINTERS 2K25, a premier event where minds meet, ideas flourish, and visions come to life. Witness the pinnacle of technological innovation, engage with industry leaders, and be part of an experience that defines the future.
-            </p>
-          </div>
-          <div className="w-full md:w-[50%]">
-            <img src={point} alt="Team" className="rounded-lg shadow-lg w-full" />
-          </div>
-        </div>
+      </div>
+    </section>
 
         <div className="text-center  w-full lg:ml-64 mb-10">
           <ParallaxText baseVelocity={5}>Dept of CSE </ParallaxText>
