@@ -51,7 +51,7 @@ const Home1 = () => {
                             fontFamily: 'sans-serif',
                             color: 'white',
                             fontWeight: 'bold',
-                            fontSize: '1.5em',
+                            fontSize: '1em',
                             lineHeight: '1.2em',
                             marginLeft: 30, // Adjust the line height as needed
                         }}
@@ -67,7 +67,7 @@ const Home1 = () => {
                         delaySpeed={1000}
                         loop={false} 
                     />
-                    <h1 className='mt-5 text-white'>Empowering Innovation, Transforming the Future.</h1>
+                    <h4 className='mt-5 text-white text-xl'>Empowering Innovation, Transforming the Future.</h4>
                     <button className='mt-5 bg-white text-black px-9 rounded-xl shadow-lg transition-transform transform hover:scale-105 hover:bg-gray-200'>
                         <Link to='/home' className='text-2xl'>Explore</Link>
                     </button>
