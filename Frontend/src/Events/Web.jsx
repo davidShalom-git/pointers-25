@@ -11,13 +11,14 @@ const Code = () => {
         <div className="bg-white flex-1 p-8 rounded-2xl shadow-2xl border border-gray-300 mb-8 lg:mb-0 max-w-lg">
           <h1 className="text-center text-3xl font-extrabold mb-6 text-gray-800">📜 Rules & Guidelines</h1>
           <ul className="text-gray-700 list-decimal list-inside space-y-3 text-lg leading-relaxed">
-            <li>Submit research papers before the deadline.</li>
-            <li>Papers must be original and unpublished elsewhere.</li>
-            <li>Topics must be relevant to the provided themes.</li>
+            <li>Late submissions will not be accepted.</li>
+            <li>Copied content will result in immediate disqualification.</li>
+            <li>Use of the internet is prohibited.</li>
             <li>The judges' decisions are final and binding.</li>
-            <li>Plagiarism should be below 10-15% with proper citations.</li>
-            <li>Teams should have 3 to 4 participants.</li>
-            <li>Each participant gets 8-10 minutes to present their paper.</li>
+            <li>Strictly prohibited from including external website links in their portfolios.</li>
+            <li>All content must be original and self-contained within the provided format.</li>
+            <li>The assets will be provided before hand.</li>
+            <li>Participants must create their portfolios using only HTML and CSS.</li>
           </ul>
 
           {/* Button to Navigate to Google Form */}

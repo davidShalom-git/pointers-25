@@ -221,31 +221,33 @@ const Home = () => {
           ))}
         </div>
 
+        
         <div className="py-16 text-center">
-          <h2 className="text-3xl font-extrabold text-gray-300">Student Organizers</h2>
-          <div className="flex overflow-x-auto py-4 gap-10 mt-10">
-            {[{ name: "Mr.S.Mohan", role: "IV Year", desgination: "PRESIDENT" },
-            { name: "Mr.K.Nityananda", role: "IV Year", desgination: "VICE-PRESIDENT" },
-            { name: "Mr.Y.S.Adithya Srinivas", role: "IV Year", desgination: "SECRETARY" },
-            { name: "Mr.K.Yuvaraj", role: "IV Year", desgination: 'JOINT SECRETARY' },
-            { name: "Mr.S.Balu", role: "IV Year", desgination: "TREASURER" },
-            { name: "Mr.R.Mithun Ragavendiran", role: "IV Year", desgination: 'HEAD OF MULTIMEDIA' },
-            { name: "Ms.K.B.Akshaya", role: "IV Year", desgination: 'TECHNICAL SCRUTINIZER' },
-            { name: "Ms.R.P.Haripriya", role: "IV Year", desgination: 'DTP CO-ORDINATOR' },
-            { name: "Ms.S.Harini", role: "IV Year", desgination: "DTP CO-ORDINATOR" },
-            { name: "Ms.V.Logeshwari", role: "IV Year", desgination: "PROGRAMME ORGANIZER" },
-            { name: "Mr.K.Bala Murugan", role: "IV Year", desgination: 'CO-PROGRAMME ORGANIZER' },
-            ].map((member, index) => (
-              <div key={index} className="min-w-[300px] text-center shadow-lg p-5 rounded-lg bg-white">
+  <h2 className="text-3xl font-extrabold text-gray-300">Student Organizers</h2>
+  <div className="flex overflow-x-auto py-4 gap-10 mt-10" style={{ msOverflowStyle: 'none', scrollbarWidth: 'none' }}>
+    {[{ name: "Mr.S.Mohan", role: "IV Year", designation: "PRESIDENT" },
+    { name: "Mr.K.Nityananda", role: "IV Year", designation: "VICE-PRESIDENT" },
+    { name: "Mr.Y.S.Adithya Srinivas", role: "IV Year", designation: "SECRETARY" },
+    { name: "Mr.K.Yuvaraj", role: "IV Year", designation: "JOINT SECRETARY" },
+    { name: "Mr.S.Balu", role: "IV Year", designation: "TREASURER" },
+    { name: "Mr.R.Mithun Ragavendiran", role: "IV Year", designation: "HEAD OF MULTIMEDIA" },
+    { name: "Ms.K.B.Akshaya", role: "IV Year", designation: "TECHNICAL SCRUTINIZER" },
+    { name: "Ms.R.P.Haripriya", role: "IV Year", designation: "DTP CO-ORDINATOR" },
+    { name: "Ms.S.Harini", role: "IV Year", designation: "DTP CO-ORDINATOR" },
+    { name: "Ms.V.Logeshwari", role: "IV Year", designation: "PROGRAMME ORGANIZER" },
+    { name: "Mr.K.Bala Murugan", role: "IV Year", designation: "CO-PROGRAMME ORGANIZER" },
+    ].map((member, index) => (
+      <div key={index} className="min-w-[300px] text-center shadow-lg p-5 rounded-lg bg-white">
+        <h3 className="text-xl font-semibold mt-4">{member.name}</h3>
+        <p className="text-gray-600">{member.role}</p>
+        <p className="text-gray-600">{member.designation}</p>
+      </div>
+    ))}
+  </div>
+</div>
 
-                <h3 className="text-xl font-semibold mt-4">{member.name}</h3>
-                <p className="text-gray-600">{member.role}</p>
-                <p className="text-gray-600">{member.desgination}</p>
 
-              </div>
-            ))}
-          </div>
-        </div>
+
 
         <div className="max-w-md mx-auto bg-gradient-to-br from-white to-gray-100 rounded-2xl shadow-xl overflow-hidden md:max-w-2xl my-8 border border-gray-200">
           <div className="p-8">
