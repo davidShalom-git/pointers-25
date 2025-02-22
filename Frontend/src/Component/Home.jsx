@@ -185,18 +185,19 @@ const Home = () => {
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.8 }}
         >
-          <h2 className="text-4xl font-extrabold bg-clip-text text-transparent bg-gradient-to-r from-yellow-400 to-orange-500">
+          <h2 className="text-4xl font-extrabold bg-clip-text  text-blue-500">
             POINTERS 2K25
           </h2>
           <p className="text-lg text-gray-300 mt-4 leading-relaxed">
-            🚀 <span className="font-semibold text-yellow-400">Join Us for POINTERS 2K25</span> – National Level Technical Symposium!<br />
-            📅 <span className="font-semibold text-blue-400">Date:</span> March 11-12, 2025<br />
-            📍 <span className="font-semibold text-green-400">Venue:</span> Arunai Engineering College..<br />
-            <span className="block mt-3">Unleash your <span className="text-purple-400 font-semibold">creativity, innovation,</span> and <span className="text-red-400 font-semibold">technical skills</span> at POINTERS 2K25!</span> 
-            Participate in <span className="font-semibold text-pink-400">exciting tech events</span>, coding challenges, workshops, and more while networking with industry experts.
+            🚀 <span className="font-semibold text-blue-500">Join Us for POINTERS 2K25</span> – National Level Technical Symposium!<br />
+            📅 <span className="font-semibold text-blue-500">Date:</span> March 11-12, 2025<br />
+            📍 <span className="font-semibold text-blue-500">Venue:</span> Arunai Engineering College..<br />
+            <span className="block mt-3">Unleash your <span className="text-blue-500 font-semibold">creativity, innovation,</span> and <span className="text-blue-500 font-semibold">technical skills</span> at POINTERS 2K25!</span> 
+            Participate in <span className="font-semibold text-blue-500">exciting tech events</span>, coding challenges, workshops, and more while networking with industry experts.
             <br /><br />
-            💡 <span className="text-orange-400 font-semibold">Showcase your talent</span>, compete, learn, and win exciting prizes!<br />
-            🔗 Stay tuned for registrations and event updates. Be a part of this <span className="text-cyan-400 font-semibold">mega tech fest</span>!
+            💡 <span className="text-blue-500 font-semibold">Showcase your talent</span>, compete, learn, and win exciting prizes!<br />
+            💡 <span className=" font-semibold">Showcase your talent</span>, compete, learn, and win exciting prizes!<br />
+            🔗 Stay tuned for registrations and event updates. Be a part of this <span className=" font-semibold text-blue-500">mega tech fest</span>!
           </p>
         </motion.div>
 

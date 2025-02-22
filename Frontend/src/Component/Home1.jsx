@@ -42,7 +42,6 @@ const Home1 = () => {
     return (
         <>
         
-             
         <div className="bg-fixed bg-center min-h-screen w-full" style={{ backgroundImage: `url(${bk})` }}>
             <div className="flex flex-col lg:flex-row md:flex-col justify-center items-center text-3xl mt-5 lg:mt-0 min-h-screen">
                 <div className='mx-auto text-center'>
@@ -68,7 +67,7 @@ const Home1 = () => {
                         delaySpeed={1000}
                         loop={false} 
                     />
-                    <h1 className='mt-5 text-white'>Study Well.. Grow Well...</h1>
+                    <h1 className='mt-5 text-white'>Empowering Innovation, Transforming the Future.</h1>
                     <button className='mt-5 bg-white text-black px-9 rounded-xl shadow-lg transition-transform transform hover:scale-105 hover:bg-gray-200'>
                         <Link to='/home' className='text-2xl'>Explore</Link>
                     </button>
