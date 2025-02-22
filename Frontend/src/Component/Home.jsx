@@ -178,7 +178,7 @@ const Home = () => {
         <section id="cse" className="py-20 px-6 md:px-16 text-white">
       <div className="max-w-6xl mx-auto flex flex-col md:flex-row items-center justify-between gap-10">
         
-        {/* Left Section */}
+       
         <motion.div 
           className="w-full md:w-1/2 text-center md:text-left"
           initial={{ opacity: 0, x: -50 }}
