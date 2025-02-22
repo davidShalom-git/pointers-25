@@ -24,6 +24,8 @@ const Code = () => {
             <li>Teams should have 3 to 4 participants.</li>
           </ul>
 
+          <h1 class="text-center mt-10 mb-10 text-xl font-extrabold">🪪 Your College ID Card is Mandatory to attend the Events.</h1>
+
           {/* Button to Navigate to Google Form */}
           <div className="text-center mt-8">
             <a href="https://forms.gle/g9svm2eXapaesefy7" target="_blank" rel="noopener noreferrer">
