@@ -27,10 +27,10 @@ const Code = () => {
             <li>TDM (1 VS 1)</li>
             <li>Winners Will Get Exciting Prices</li>
             <li>Participants will also receive a participation certificate.</li>
+        <h1 class="text-center mt-10 mb-10 text-xl font-extrabold">🪪 Your College ID Card is Mandatory to attend the Events.</h1>
           </ul>
         </div>
 
-        <h1 class="text-center mt-10 mb-10 text-xl font-extrabold">🪪 Your College ID Card is Mandatory to attend the Events.</h1>
 
         {/* Register Button */}
         <div className="text-center mt-8 flex-shrink-0">
@@ -53,6 +53,7 @@ const Code = () => {
             <li>Player’s devices and software may be checked before and after matches.</li>
             <li>Winners Will Get Exciting Prices</li>
             <li>Participants will also receive a participation certificate.</li>
+            <h1 class="text-center mt-10 mb-10 text-xl font-extrabold">🪪 Your College ID Card is Mandatory to attend the Events.</h1>
           </ul>
         </div>
       </div>
