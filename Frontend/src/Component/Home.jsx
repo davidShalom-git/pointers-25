@@ -9,14 +9,15 @@ import {
   useAnimationFrame
 } from "framer-motion";
 import { wrap } from "@motionone/utils";
-import Spline from "@splinetool/react-spline";
+import Typewriter from 'react-typewriter-effect';
 import { Link } from "react-router-dom";
-import gsap from "gsap";
 import educate from "../assets/educate.jpg";
 import explore from "../assets/Explore.png";
 import point from '../assets/point.jpg'
 import "../App.css";
 import galaxy from "../assets/galaxy.png";
+
+
 
 const ParallaxText = ({ children, baseVelocity = 100 }) => {
   const baseX = useMotionValue(0);
@@ -58,51 +59,21 @@ const ParallaxText = ({ children, baseVelocity = 100 }) => {
 };
 
 const Home = () => {
-  const pointerRef = useRef(null);
-  const k25Ref = useRef(null);
-  const pointerMobileRef = useRef(null);
-  const k25MobileRef = useRef(null);
   const [isOpen, setIsOpen] = useState(false);
   const navRef = useRef(null);
   const imageRef = useRef(null);
-  const textRef = useRef(null);
-  const h1Ref = useRef(null);
+
+  const [key, setKey] = useState(0);
 
   const toggleMenu = () => setIsOpen(!isOpen);
 
   useEffect(() => {
-    if (!navRef.current || !imageRef.current || !textRef.current || !h1Ref.current) return;
+    const interval = setInterval(() => {
+      setKey(prevKey => prevKey + 1);
+    }, 8000);
 
-    const ctx = gsap.context(() => {
-      gsap.fromTo(
-        navRef.current,
-        { y: -100, opacity: 0 },
-        { y: 0, opacity: 1, duration: 1, ease: "power2.out" }
-      );
-
-      gsap.timeline()
-        .from(imageRef.current, {
-          x: window.innerWidth < 768 ? 0 : -200,
-          opacity: 0,
-          duration: 1.5,
-          ease: "power2.out",
-        })
-        .from(textRef.current, {
-          y: 200,
-          opacity: 0,
-          duration: 1.5,
-          ease: "power2.out",
-        }, "-=1")
-        .to(h1Ref.current, {
-          text: "Smart Learning...",
-          duration: 2,
-          ease: "power2.inOut",
-        }, "-=1");
-    });
-
-    return () => ctx.revert();
+    return () => clearInterval(interval);
   }, []);
-
 
   const [activeIndex, setActiveIndex] = useState(null);
 
@@ -120,14 +91,7 @@ const Home = () => {
     setActiveIndex(activeIndex === index ? null : index);
   };
 
-  useEffect(() => {
-    // For large screens
-    gsap.fromTo(pointerRef.current, { y: 50, opacity: 0 }, { y: 0, opacity: 1, duration: 1.5, ease: 'power3.out' });
-    gsap.fromTo(k25Ref.current, { y: 50, opacity: 0 }, { y: 0, opacity: 1, duration: 1.5, ease: 'power3.out', delay: 0.5 });
-    // For small screens
-    gsap.fromTo(pointerMobileRef.current, { y: 50, opacity: 0 }, { y: 0, opacity: 1, duration: 1.5, ease: 'power3.out' });
-    gsap.fromTo(k25MobileRef.current, { y: 50, opacity: 0 }, { y: 0, opacity: 1, duration: 1.5, ease: 'power3.out', delay: 0.5 });
-  }, []);
+
 
   return (
     <>
@@ -157,66 +121,76 @@ const Home = () => {
       </div>
 
       <div className="container mx-auto px-3">
-        <div className="flex flex-col items-center justify-center text-center">
-          <div className="relative w-full h-[100vh] flex items-center justify-center bg-black overflow-hidden">
-            <h1 ref={pointerRef} className="absolute left-10 md:left-20 lg:left-5 top-1/2 transform -translate-y-1/2 text-5xl md:text-8xl lg:text-7xl text-white font-bold opacity-70 hidden lg:block">
-              POINTERS
-            </h1>
-            <h1 ref={k25Ref} className="absolute right-10 md:right-20 lg:right-20 top-1/2 transform -translate-y-1/2 text-5xl md:text-8xl lg:text-7xl text-white font-bold opacity-70 hidden lg:block">
-              2K25
-            </h1>
-            <h1 ref={pointerMobileRef} className="absolute top-12 mt-2 text-5xl md:text-8xl lg:text-8xl text-white font-bold opacity-70 lg:hidden space-y-3">
-              POINTERS
-            </h1>
-            <h1 ref={k25MobileRef} className="absolute top-28 text-5xl md:text-8xl lg:text-8xl text-white font-bold opacity-70 lg:hidden space-y-2">
-              2K25
-            </h1>
-            <Spline scene="https://prod.spline.design/echVvdtq9JHAKrMx/scene.splinecode" />
-          </div>
+      <div className="flex flex-col justify-center items-center h-24 mt-64 mb-46">
+      <Typewriter
+                textStyle={{
+                    fontFamily: 'Poppins, sans-serif',
+                    fontWeight: 'bold',
+                    fontSize: '2.7rem',
+                    textAlign: 'center',
+                    background: 'linear-gradient(90deg, #00DBDE 0%, #FC00FF 100%)',
+                    WebkitBackgroundClip: 'text',
+                    WebkitTextFillColor: 'transparent',
+                    display: 'inline-block'
+                }}
+                startDelay={100}
+                cursorColor="#fff"
+                multiText={[
+                    "Arunai Engineering College...",
+                    "Department of Computer Science and Engineering!"
+                ]}
+                multiTextDelay={1000}  
+                typeSpeed={70}
+                deleteSpeed={50}
+                delaySpeed={1500}  
+                loop={true} 
+            />
+               <h4 className='mt-5 text-white text-xl'>Empowering the Innovation</h4>
+                            
         </div>
 
         <section id="cse" className="py-20 px-6 md:px-16 text-white">
-      <div className="max-w-6xl mx-auto flex flex-col md:flex-row items-center justify-between gap-10">
-        
-       
-        <motion.div 
-          className="w-full md:w-1/2 text-center md:text-left"
-          initial={{ opacity: 0, x: -50 }}
-          animate={{ opacity: 1, x: 0 }}
-          transition={{ duration: 0.8 }}
-        >
-          <h2 className="text-4xl font-extrabold bg-clip-text  text-blue-500">
-            POINTERS 2K25
-          </h2>
-          <p className="text-lg text-gray-300 mt-4 leading-relaxed">
-            🚀 <span className="font-semibold text-blue-500">Join Us for POINTERS 2K25</span> – National Level Technical Symposium!<br />
-            📅 <span className="font-semibold text-blue-500">Date:</span> March 11-12, 2025<br />
-            📍 <span className="font-semibold text-blue-500">Venue:</span> Arunai Engineering College..<br />
-            <span className="block mt-3">Unleash your <span className="text-blue-500 font-semibold">creativity, innovation,</span> and <span className="text-blue-500 font-semibold">technical skills</span> at POINTERS 2K25!</span> 
-            Participate in <span className="font-semibold text-blue-500">exciting tech events</span>, coding challenges, workshops, and more while networking with industry experts.
-            <br /><br />
-            💡 <span className="text-blue-500 font-semibold">Showcase your talent</span>, compete, learn, and win exciting prizes!<br />
-            💡 <span className=" font-semibold">Showcase your talent</span>, compete, learn, and win exciting prizes!<br />
-            🔗 Stay tuned for registrations and event updates. Be a part of this <span className=" font-semibold text-blue-500">mega tech fest</span>!
-          </p>
-        </motion.div>
+          <div className="max-w-6xl mx-auto flex flex-col md:flex-row items-center justify-between gap-10">
 
-        {/* Right Section - Image */}
-        <motion.div 
-          className="w-full md:w-[50%]"
-          initial={{ opacity: 0, x: 50 }}
-          animate={{ opacity: 1, x: 0 }}
-          transition={{ duration: 0.8 }}
-        >
-          <img 
-            src={point} 
-            alt="Team" 
-            className="rounded-lg shadow-2xl w-full hover:scale-105 transition-transform duration-300"
-          />
-        </motion.div>
 
-      </div>
-    </section>
+            <motion.div
+              className="w-full md:w-1/2 text-center md:text-left"
+              initial={{ opacity: 0, x: -50 }}
+              animate={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.8 }}
+            >
+              <h2 className="text-4xl font-extrabold bg-clip-text  text-blue-500">
+                POINTERS 2K25
+              </h2>
+              <p className="text-lg text-gray-300 mt-4 leading-relaxed">
+                🚀 <span className="font-semibold text-blue-500">Join Us for POINTERS 2K25</span> – National Level Technical Symposium!<br />
+                📅 <span className="font-semibold text-blue-500">Date:</span> March 11-12, 2025<br />
+                📍 <span className="font-semibold text-blue-500">Venue:</span> Arunai Engineering College..<br />
+                <span className="block mt-3">Unleash your <span className="text-blue-500 font-semibold">creativity, innovation,</span> and <span className="text-blue-500 font-semibold">technical skills</span> at POINTERS 2K25!</span>
+                Participate in <span className="font-semibold text-blue-500">exciting tech events</span>, coding challenges, workshops, and more while networking with industry experts.
+                <br /><br />
+                💡 <span className="text-blue-500 font-semibold">Showcase your talent</span>, compete, learn, and win exciting prizes!<br />
+                💡 <span className=" font-semibold">Showcase your talent</span>, compete, learn, and win exciting prizes!<br />
+                🔗 Stay tuned for registrations and event updates. Be a part of this <span className=" font-semibold text-blue-500">mega tech fest</span>!
+              </p>
+            </motion.div>
+
+            {/* Right Section - Image */}
+            <motion.div
+              className="w-full md:w-[50%]"
+              initial={{ opacity: 0, x: 50 }}
+              animate={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.8 }}
+            >
+              <img
+                src={point}
+                alt="Team"
+                className="rounded-lg shadow-2xl w-full hover:scale-105 transition-transform duration-300"
+              />
+            </motion.div>
+
+          </div>
+        </section>
 
         <div className="text-center  w-full lg:ml-64 mb-10">
           <ParallaxText baseVelocity={5}>Dept of CSE </ParallaxText>
@@ -250,30 +224,30 @@ const Home = () => {
           ))}
         </div>
 
-        
+
         <div className="py-16 text-center">
-  <h2 className="text-3xl font-extrabold text-gray-300">Student Organizers</h2>
-  <div className="flex overflow-x-auto py-4 gap-10 mt-10" style={{ msOverflowStyle: 'none', scrollbarWidth: 'none' }}>
-    {[{ name: "Mr.S.Mohan", role: "IV Year", designation: "PRESIDENT" },
-    { name: "Mr.K.Nityananda", role: "IV Year", designation: "VICE-PRESIDENT" },
-    { name: "Mr.Y.S.Adithya Srinivas", role: "IV Year", designation: "SECRETARY" },
-    { name: "Mr.K.Yuvaraj", role: "IV Year", designation: "JOINT SECRETARY" },
-    { name: "Mr.S.Balu", role: "IV Year", designation: "TREASURER" },
-    { name: "Mr.R.Mithun Ragavendiran", role: "IV Year", designation: "HEAD OF MULTIMEDIA" },
-    { name: "Ms.K.B.Akshaya", role: "IV Year", designation: "TECHNICAL SCRUTINIZER" },
-    { name: "Ms.R.P.Haripriya", role: "IV Year", designation: "DTP CO-ORDINATOR" },
-    { name: "Ms.S.Harini", role: "IV Year", designation: "DTP CO-ORDINATOR" },
-    { name: "Ms.V.Logeshwari", role: "IV Year", designation: "PROGRAMME ORGANIZER" },
-    { name: "Mr.K.Bala Murugan", role: "IV Year", designation: "CO-PROGRAMME ORGANIZER" },
-    ].map((member, index) => (
-      <div key={index} className="min-w-[300px] text-center shadow-lg p-5 rounded-lg bg-white">
-        <h3 className="text-xl font-semibold mt-4">{member.name}</h3>
-        <p className="text-gray-600">{member.role}</p>
-        <p className="text-gray-600">{member.designation}</p>
-      </div>
-    ))}
-  </div>
-</div>
+          <h2 className="text-3xl font-extrabold text-gray-300">Student Organizers</h2>
+          <div className="flex overflow-x-auto py-4 gap-10 mt-10" style={{ msOverflowStyle: 'none', scrollbarWidth: 'none' }}>
+            {[{ name: "Mr.S.Mohan", role: "IV Year", designation: "PRESIDENT" },
+            { name: "Mr.K.Nityananda", role: "IV Year", designation: "VICE-PRESIDENT" },
+            { name: "Mr.Y.S.Adithya Srinivas", role: "IV Year", designation: "SECRETARY" },
+            { name: "Mr.K.Yuvaraj", role: "IV Year", designation: "JOINT SECRETARY" },
+            { name: "Mr.S.Balu", role: "IV Year", designation: "TREASURER" },
+            { name: "Mr.R.Mithun Ragavendiran", role: "IV Year", designation: "HEAD OF MULTIMEDIA" },
+            { name: "Ms.K.B.Akshaya", role: "IV Year", designation: "TECHNICAL SCRUTINIZER" },
+            { name: "Ms.R.P.Haripriya", role: "IV Year", designation: "DTP CO-ORDINATOR" },
+            { name: "Ms.S.Harini", role: "IV Year", designation: "DTP CO-ORDINATOR" },
+            { name: "Ms.V.Logeshwari", role: "IV Year", designation: "PROGRAMME ORGANIZER" },
+            { name: "Mr.K.Bala Murugan", role: "IV Year", designation: "CO-PROGRAMME ORGANIZER" },
+            ].map((member, index) => (
+              <div key={index} className="min-w-[300px] text-center shadow-lg p-5 rounded-lg bg-white">
+                <h3 className="text-xl font-semibold mt-4">{member.name}</h3>
+                <p className="text-gray-600">{member.role}</p>
+                <p className="text-gray-600">{member.designation}</p>
+              </div>
+            ))}
+          </div>
+        </div>
 
 
 
@@ -284,11 +258,11 @@ const Home = () => {
             <p className="text-center text-gray-600 text-lg leading-relaxed">
               Have questions? Feel free to reach out to us. We're happy to help! 🎉
             </p>
-           
+
             <p className="text-center text-xl text-gray-600 mt-5">+91 8883214777</p>
-        
+
             <p className="text-center text-xl text-gray-600">+91 9790970202</p>
-           
+
             <p className="text-center text-xl text-gray-600">+91 9677379586</p>
 
             <div className="flex justify-center mt-6">
