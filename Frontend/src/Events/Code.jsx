@@ -25,9 +25,7 @@ const Code = () => {
          <li>Any form of malpractice will lead to immediate disqualification.</li>
          </ul>
           <h2 className="text-xl mt-20">Contact For Further Details:</h2>
-          <h2 className="text-xl mt-5">Name: V.Dhivya</h2>
           <h2 className="text-xl mt-2">Contact No: +91 8903376835</h2>
-          <h2 className="text-xl mt-5">Name: G.Sharmila</h2>
           <h2 className="text-xl mt-2">Contact No: +91 7305547675</h2>
           
 
