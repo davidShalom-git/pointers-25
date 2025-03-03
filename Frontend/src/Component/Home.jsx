@@ -247,7 +247,7 @@ const Home = () => {
         </div>
 
         
-        <div className="py-16 text-center">
+         <div className="py-16 text-center">
   <h2 className="text-3xl font-extrabold text-gray-300">Student Organizers</h2>
   <div className="flex overflow-x-auto py-4 gap-10 mt-10" style={{ msOverflowStyle: 'none', scrollbarWidth: 'none' }}>
     {[{ name: "Mr.S.Mohan", role: "IV Year", designation: "PRESIDENT" },
@@ -281,9 +281,10 @@ const Home = () => {
               Have questions? Feel free to reach out to us. We're happy to help! 🎉
             </p>
 
-            <p className="text-center text-xl text-gray-600 mt-5">+91 8883214777</p>
-        
-            <p className="text-center text-xl text-gray-600">+91 9790970202</p>
+             <p className="text-center text-xl text-gray-600 mt-5">+91 8883214777</p>
+      
+            <p className="text-center text-xl text-gray-600">+91 8925047378 </p>
+            <p className="text-center text-xl text-gray-600">+91 63696 44323 </p>
            
             <p className="text-center text-xl text-gray-600">+91 9677379586</p>
 
