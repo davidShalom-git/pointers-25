@@ -16,7 +16,7 @@ import explore from "../assets/Explore.png";
 import point from '../assets/point.jpg'
 import "../App.css";
 import galaxy from "../assets/galaxy.png";
-
+import gsap from 'gsap';
 
 
 const ParallaxText = ({ children, baseVelocity = 100 }) => {
@@ -86,19 +86,34 @@ const Home = () => {
     { question: "Is Transportation Available?", answer: "Yes, For Further Details Contact Us...." },
   ];
 
+  const organizers = [
+    { image:  educate},
+    { image: explore},
+   
+  ];
+
+  const [currentIndex, setCurrentIndex] = useState(0);
+
+  const handleNext = () => {
+    setCurrentIndex((prevIndex) => (prevIndex + 1) % organizers.length);
+  };
+
+  const handlePrevious = () => {
+    setCurrentIndex((prevIndex) => (prevIndex - 1 + organizers.length) % organizers.length);
+  };
+
+  const handleSelect = (index) => {
+    setCurrentIndex(index);
+  };
+
+  const prevIndex = (currentIndex - 1 + organizers.length) % organizers.length;
+  const nextIndex = (currentIndex + 1) % organizers.length;
 
   const handleToggle = (index) => {
     setActiveIndex(activeIndex === index ? null : index);
   };
 
-  useEffect(() => {
-    // For large screens
-    gsap.fromTo(pointerRef.current, { y: 50, opacity: 0 }, { y: 0, opacity: 1, duration: 1.5, ease: 'power3.out' });
-    gsap.fromTo(k25Ref.current, { y: 50, opacity: 0 }, { y: 0, opacity: 1, duration: 1.5, ease: 'power3.out', delay: 0.5 });
-    // For small screens
-    gsap.fromTo(pointerMobileRef.current, { y: 50, opacity: 0 }, { y: 0, opacity: 1, duration: 1.5, ease: 'power3.out' });
-    gsap.fromTo(k25MobileRef.current, { y: 50, opacity: 0 }, { y: 0, opacity: 1, duration: 1.5, ease: 'power3.out', delay: 0.5 });
-  }, []);
+
 
   return (
     <>
