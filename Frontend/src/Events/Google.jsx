@@ -29,7 +29,7 @@ const Code = () => {
           </ul>
 
           <h2 className="text-xl mt-20">Contact For Further Details:</h2>
-          <h2 className="text-xl mt-5">Name: S.Mohan</h2>
+         
           <h2 className="text-xl mt-2">Contact No: +91 8883214777</h2>
          
           
