@@ -4,27 +4,44 @@ const Code = () => {
   return (
     <div
       className="min-h-screen flex flex-col items-center justify-center px-4 bg-fixed bg-center bg-cover w-full"
-      style={{ backgroundImage: `url(${bk})` }}
+  
     >
       {/* Form Container */}
       <div className="relative w-full h-full flex flex-col lg:flex-row items-center justify-evenly bg-fixed bg-cover bg-center lg:mt-20 mt-20 p-4 space-y-8 lg:space-y-0 lg:space-x-8">
-        <div className="bg-white flex-1 p-8 rounded-2xl shadow-2xl border border-gray-300 mb-8 lg:mb-0 max-w-lg">
+        <div className="bg-white flex-1 p-8 rounded-2xl shadow-2xl border border-gray-300 mb-8 lg:mb-0 max-w-lg w-full">
           <h1 className="text-center text-3xl font-extrabold mb-6 text-gray-800">📜 Rules & Guidelines</h1>
           <ul className="text-gray-700 list-decimal list-inside space-y-3 text-lg leading-relaxed">
-            <p className="text-bold text-xl">Description</p>
-            <p className="text-bold mb-10">Every great tale begins with a single idea just like that Story building is all about crafting compelling characters, exciting plots, and immersive worlds</p>
-            <p className="text-bold text-xl">Pictures</p>
-            <p className="text-bold mb-10">It is a visual puzzle or game where participants are shown a series of images and must identify the common theme, word, phrase, or concept that links them together. It helps to think the participants outside the box and make logical or creative associations between different pictures. </p>
-            <p className="text-bold text-xl">Spin Wheel</p>
-            <p className="text-bold mb-10">A wheel is divided into sections with different options, and writers spin it to determine aspects of their story. </p>
-            <li>There are 2 Rounds in this event</li>
-            <li>A Team Should has 2 Members</li>
-            <li>Each Team Carries 4 Minutes</li>
-            <li>Electronic Devices are Not Allowed</li>
-            <li>Teams should have 3 to 4 participants.</li>
+            <li>1.Movie Mania</li>
+            <li>2.Cine Wheel</li>
+            <li>3.Bridge Builder</li>
+            <h3 className="text-center text-3xl font-bold mb-6 text-gray-800">Movie Mania</h3>
+            <li>Each team is provided with a buzzer.</li>
+            <li>When a team finds the movie name, they must press the buzzer and provide the correct answer.</li>
+            <h3 className="text-center text-3xl font-bold mb-6 text-gray-800">Cine Wheel</h3>
+            <li>Cine Wheel is a game where a spinning wheel contains different movie names</li>
+            <li>Players take turns spinning the wheel in a clockwise direction.</li>
+            <li>The player must spin the wheel with enough force to complete at least one full rotation.</li>
+            <li>The players must find a minimum of 3 and a maximum of 5 songs from the given movie within 1 minute.</li>
+            <h1 className="text-center text-3xl font-extrabold mb-6 text-gray-800 mt-5">Bridge Builder</h1>
+            <li>Participants must build a story based on random pictures provided.</li>
+            <h1 className=" text-xl font-bold mb-6 text-gray-800 mt-2">This round lasts 3 minutes:</h1>
+            <li>2 minutes for building the story.</li>
+            <li>1 minute for narrating the story.</li>
+            <h1 className="text-center text-3xl font-extrabold mb-6 text-gray-800 mt-5">Rules</h1>
+            <li>A team should contain a maximum of 3 participants.</li>
+            <li>Mobile phones and any other electronic gadgets are strictly prohibited (except in Round 1: Movie Mania).</li>
+            <li>Scores will be awarded based on team performance.</li>
           </ul>
 
-          <h1 class="text-center mt-10 mb-10 text-xl font-extrabold">🪪 Your College ID Card is Mandatory to attend the Events.</h1>
+          <h2 className="text-xl mt-20">Contact For Further Details:</h2>
+          <h2 className="text-xl mt-5">Name: R.P.Haripriya</h2>
+          <h2 className="text-xl mt-2">Contact No: +91 9566115026 </h2>
+
+          
+
+          <h1 class="text-center mt-24 mb-10 text-xl font-extrabold ">🪪 Your College ID Card is Mandatory to attend the Events.</h1>
+
+
 
           {/* Button to Navigate to Google Form */}
           <div className="text-center mt-8">
