@@ -25,9 +25,9 @@ const Code = () => {
            </ul>
 
           <h2 className="text-xl mt-20">Contact For Further Details:</h2>
-          <h2 className="text-xl mt-5">Name: K.B.Akshaya</h2>
+         
           <h2 className="text-xl mt-2">Contact No: +91 9865438909  </h2>
-          <h2 className="text-xl mt-5">Name: S.Sona</h2>
+       
           <h2 className="text-xl mt-2">Contact No: +91 9655431653</h2>
           
 
