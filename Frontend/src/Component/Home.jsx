@@ -261,7 +261,7 @@ const Home = () => {
 
             <p className="text-center text-xl text-gray-600 mt-5">+91 8883214777</p>
 
-            <p className="text-center text-xl text-gray-600">+91 9790970202</p>
+            <p className="text-center text-xl text-gray-600">+91 8925047378</p>
 
             <p className="text-center text-xl text-gray-600">+91 9677379586</p>
 
