@@ -33,9 +33,9 @@ const Code = () => {
           </ul>
 
           <h2 className="text-xl mt-20">Contact For Further Details:</h2>
-          <h2 className="text-xl mt-5">Name: S.Harini</h2>
+       
           <h2 className="text-xl mt-2">Contact No: +91 9345190189</h2>
-          <h2 className="text-xl mt-5">Name: J.Dinesh</h2>
+         
           <h2 className="text-xl mt-2">Contact No: +91 8778234617</h2>
           
 
