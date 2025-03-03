@@ -91,7 +91,14 @@ const Home = () => {
     setActiveIndex(activeIndex === index ? null : index);
   };
 
-
+  useEffect(() => {
+    // For large screens
+    gsap.fromTo(pointerRef.current, { y: 50, opacity: 0 }, { y: 0, opacity: 1, duration: 1.5, ease: 'power3.out' });
+    gsap.fromTo(k25Ref.current, { y: 50, opacity: 0 }, { y: 0, opacity: 1, duration: 1.5, ease: 'power3.out', delay: 0.5 });
+    // For small screens
+    gsap.fromTo(pointerMobileRef.current, { y: 50, opacity: 0 }, { y: 0, opacity: 1, duration: 1.5, ease: 'power3.out' });
+    gsap.fromTo(k25MobileRef.current, { y: 50, opacity: 0 }, { y: 0, opacity: 1, duration: 1.5, ease: 'power3.out', delay: 0.5 });
+  }, []);
 
   return (
     <>
@@ -224,30 +231,30 @@ const Home = () => {
           ))}
         </div>
 
-
+        
         <div className="py-16 text-center">
-          <h2 className="text-3xl font-extrabold text-gray-300">Student Organizers</h2>
-          <div className="flex overflow-x-auto py-4 gap-10 mt-10" style={{ msOverflowStyle: 'none', scrollbarWidth: 'none' }}>
-            {[{ name: "Mr.S.Mohan", role: "IV Year", designation: "PRESIDENT" },
-            { name: "Mr.K.Nityananda", role: "IV Year", designation: "VICE-PRESIDENT" },
-            { name: "Mr.Y.S.Adithya Srinivas", role: "IV Year", designation: "SECRETARY" },
-            { name: "Mr.K.Yuvaraj", role: "IV Year", designation: "JOINT SECRETARY" },
-            { name: "Mr.S.Balu", role: "IV Year", designation: "TREASURER" },
-            { name: "Mr.R.Mithun Ragavendiran", role: "IV Year", designation: "HEAD OF MULTIMEDIA" },
-            { name: "Ms.K.B.Akshaya", role: "IV Year", designation: "TECHNICAL SCRUTINIZER" },
-            { name: "Ms.R.P.Haripriya", role: "IV Year", designation: "DTP CO-ORDINATOR" },
-            { name: "Ms.S.Harini", role: "IV Year", designation: "DTP CO-ORDINATOR" },
-            { name: "Ms.V.Logeshwari", role: "IV Year", designation: "PROGRAMME ORGANIZER" },
-            { name: "Mr.K.Bala Murugan", role: "IV Year", designation: "CO-PROGRAMME ORGANIZER" },
-            ].map((member, index) => (
-              <div key={index} className="min-w-[300px] text-center shadow-lg p-5 rounded-lg bg-white">
-                <h3 className="text-xl font-semibold mt-4">{member.name}</h3>
-                <p className="text-gray-600">{member.role}</p>
-                <p className="text-gray-600">{member.designation}</p>
-              </div>
-            ))}
-          </div>
-        </div>
+  <h2 className="text-3xl font-extrabold text-gray-300">Student Organizers</h2>
+  <div className="flex overflow-x-auto py-4 gap-10 mt-10" style={{ msOverflowStyle: 'none', scrollbarWidth: 'none' }}>
+    {[{ name: "Mr.S.Mohan", role: "IV Year", designation: "PRESIDENT" },
+    { name: "Mr.K.Nityananda", role: "IV Year", designation: "VICE-PRESIDENT" },
+    { name: "Mr.Y.S.Adithya Srinivas", role: "IV Year", designation: "SECRETARY" },
+    { name: "Mr.K.Yuvaraj", role: "IV Year", designation: "JOINT SECRETARY" },
+    { name: "Mr.S.Balu", role: "IV Year", designation: "TREASURER" },
+    { name: "Mr.R.Mithun Ragavendiran", role: "IV Year", designation: "HEAD OF MULTIMEDIA" },
+    { name: "Ms.K.B.Akshaya", role: "IV Year", designation: "TECHNICAL SCRUTINIZER" },
+    { name: "Ms.R.P.Haripriya", role: "IV Year", designation: "DTP CO-ORDINATOR" },
+    { name: "Ms.S.Harini", role: "IV Year", designation: "DTP CO-ORDINATOR" },
+    { name: "Ms.V.Logeshwari", role: "IV Year", designation: "PROGRAMME ORGANIZER" },
+    { name: "Mr.K.Bala Murugan", role: "IV Year", designation: "CO-PROGRAMME ORGANIZER" },
+    ].map((member, index) => (
+      <div key={index} className="min-w-[300px] text-center shadow-lg p-5 rounded-lg bg-white">
+        <h3 className="text-xl font-semibold mt-4">{member.name}</h3>
+        <p className="text-gray-600">{member.role}</p>
+        <p className="text-gray-600">{member.designation}</p>
+      </div>
+    ))}
+  </div>
+</div>
 
 
 
@@ -260,9 +267,9 @@ const Home = () => {
             </p>
 
             <p className="text-center text-xl text-gray-600 mt-5">+91 8883214777</p>
-
-            <p className="text-center text-xl text-gray-600">+91 8925047378</p>
-
+        
+            <p className="text-center text-xl text-gray-600">+91 9790970202</p>
+           
             <p className="text-center text-xl text-gray-600">+91 9677379586</p>
 
             <div className="flex justify-center mt-6">
@@ -283,6 +290,35 @@ const Home = () => {
         <div className="text-center text-gray-400 text-xl mb-16">
           Join the excitement and register on-site today!
         </div>
+
+        <div className="py-16 text-center" id="organizer">
+      <h2 className="text-3xl font-extrabold text-gray-300">Our Sponsorships</h2>
+      <div className="flex justify-center items-center mt-10 space-x-4">
+        <div
+          className="min-w-[200px] text-center shadow-lg p-5 rounded-lg  cursor-pointer"
+          onClick={() => handleSelect(prevIndex)}
+        >
+          <img src={organizers[prevIndex].image} alt={`Organizer ${prevIndex + 1}`} className="w-full h-auto rounded-lg" />
+        </div>
+        <div className="min-w-[300px] max-w-[500px] w-full text-center shadow-lg p-10 rounded-lg ">
+          <img src={organizers[currentIndex].image} alt={`Organizer ${currentIndex + 1}`} className="w-full h-auto rounded-lg mb-4" />
+        </div>
+        <div
+          className="min-w-[200px] text-center shadow-lg p-5 rounded-lg  cursor-pointer"
+          onClick={() => handleSelect(nextIndex)}
+        >
+          <img src={organizers[nextIndex].image} alt={`Organizer ${nextIndex + 1}`} className="w-full h-auto rounded-lg" />
+        </div>
+      </div>
+      <div className="flex mt-4 justify-center space-x-2">
+        <button onClick={handlePrevious} className="px-4 py-2 bg-gray-300 text-gray-700 rounded">
+          &lt;
+        </button>
+        <button onClick={handleNext} className="px-4 py-2 bg-gray-300 text-gray-700 rounded">
+          &gt;
+        </button>
+      </div>
+    </div>
 
 
 
