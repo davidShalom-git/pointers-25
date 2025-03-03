@@ -37,14 +37,14 @@ const Code = () => {
 
           <h2 className="text-xl mt-20">Contact For Further Details:</h2>
           <h2 className="text-xl font-bold mt-10">Free Fire:</h2>
-          <h2 className="text-xl mt-5">Name: V.Dhakshanamoorthy</h2>
+         
           <h2 className="text-xl mt-2">Contact No: +91 6374882631 </h2>
-          <h2 className="text-xl mt-5">Name: S.Srichandran</h2>
+        
           <h2 className="text-xl mt-2">Contact No: +91 9342886897</h2>
           <h2 className="text-xl font-bold mt-20">BGMI:</h2>
-          <h2 className="text-xl mt-5">Name: B.Hariparthasarathy</h2>
+          
           <h2 className="text-xl mt-2">Contact No: +91 9342594645</h2>
-          <h2 className="text-xl mt-5">Name: S.Sriram</h2>
+         
           <h2 className="text-xl mt-2">Contact No: +91 9360790976</h2>
           
 
