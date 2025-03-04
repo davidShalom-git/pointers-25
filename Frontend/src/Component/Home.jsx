@@ -17,6 +17,7 @@ import point from '../assets/point.jpg'
 import "../App.css";
 import galaxy from "../assets/galaxy.png";
 import gsap from 'gsap';
+import lens from '../assets/lenskart.jpg'
 
 
 const ParallaxText = ({ children, baseVelocity = 100 }) => {
@@ -87,7 +88,7 @@ const Home = () => {
   ];
 
   const organizers = [
-    { image:  educate},
+      { image:  lens},
     { image: explore},
    
   ];
