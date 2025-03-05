@@ -172,6 +172,12 @@ const Home = () => {
                             
         </div>
 
+        <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', }}>
+    <h1 style={{ color: 'white', width: '50%', marginTop: '10px', marginBottom: '20px', fontSize: '1.25rem', textAlign: 'center', textShadow: '2px 2px 5px rgba(0, 0, 0, 0.5)', border: '2px solid white', padding: '10px', borderRadius: '10px' }}>
+        Last Date for Registration 9th March
+    </h1>
+</div>
+
         <section id="cse" className="py-20 px-6 md:px-16 text-white">
           <div className="max-w-6xl mx-auto flex flex-col md:flex-row items-center justify-between gap-10">
 
@@ -246,6 +252,14 @@ const Home = () => {
             </Link>
           ))}
         </div>
+
+         <div className="text-center mt-20 flex-shrink-0 mb-20 ">
+        <a href="https://forms.gle/g9svm2eXapaesefy7" target="_blank" rel="noopener noreferrer">
+          <button className="px-20 py-5 bg-gradient-to-r from-blue-500 to-blue-700 text-white font-semibold rounded-lg shadow-md hover:scale-105 transition-all duration-300">
+            Register Now
+          </button>
+        </a>
+      </div>
 
         
          <div className="py-16 text-center">
